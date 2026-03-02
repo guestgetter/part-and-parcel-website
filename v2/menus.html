@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menus | Part & Parcel | Lunch, Happy Hour & Dinner in Victoria BC</title>
+  <meta name="description" content="Explore our seasonal menus — lunch, happy hour, dinner small plates, and our $74 Feast With Us tasting experience at Part & Parcel in Quadra Village, Victoria BC.">
+  <link rel="canonical" href="https://www.partandparcel.ca/menus.html">
+  <link rel="icon" type="image/png" href="part-and-parcel-logo.png">
+  <link rel="apple-touch-icon" href="part-and-parcel-logo.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#2B3A5C">
+
+  <meta property="og:title" content="Menus | Part & Parcel Victoria BC">
+  <meta property="og:description" content="Seasonal small plates, creative cocktails & our $74 Feast With Us tasting menu. See what's cooking.">
+  <meta property="og:url" content="https://www.partandparcel.ca/menus.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.partandparcel.ca/part-and-parcel-front-illustration.png">
+  <meta property="og:image:alt" content="Illustrated storefront of Part and Parcel restaurant in Victoria BC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Menus | Part & Parcel Victoria BC">
+  <meta name="twitter:description" content="Lunch, happy hour, dinner and Feast With Us tasting menu in Quadra Village, Victoria BC.">
+  <meta name="twitter:image" content="https://www.partandparcel.ca/part-and-parcel-front-illustration.png">
+
+  <!-- Schema: Menu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "Part & Parcel Menu",
+    "description": "Seasonal small plates, lunch, happy hour & dinner menus at Part & Parcel, Victoria BC",
+    "hasMenuSection": [
+      { "@type": "MenuSection", "name": "Lunch", "description": "Bright, seasonal plates. Tuesday–Saturday, 11:30am–4:30pm." },
+      { "@type": "MenuSection", "name": "Happy Hour", "description": "Snacks & drink specials. Tuesday–Saturday, 2:30–4:30pm & 9–10pm." },
+      { "@type": "MenuSection", "name": "Dinner", "description": "Seasonal small plates & larger plates. Tuesday–Saturday, 4:30–10pm." }
+    ],
+    "inLanguage": "en"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+
+<body>
+  <div class="page-wash" aria-hidden="true"></div>
+  <div aria-hidden="true">
+    <div class="wc-spot wc-spot-1"></div>
+    <div class="wc-spot wc-spot-2"></div>
+    <div class="wc-spot wc-spot-3"></div>
+  </div>
+
+  <div class="mobile-menu" role="dialog" aria-label="Navigation">
+    <a href="index.html">Home</a>
+    <a href="menus.html">Menus</a>
+    <a href="about.html">Our Story</a>
+    <a href="visit.html">Visit</a>
+    <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Reservations</a>
+  </div>
+
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="nav-logo"><img src="part-and-parcel-logo.png" alt="Part and Parcel — Handcrafted Cooking"></a>
+    <div class="nav-links">
+      <a href="menus.html" class="active">Menus</a>
+      <a href="about.html">Our Story</a>
+      <a href="visit.html">Visit</a>
+      <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="nav-cta">Reserve</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-interior">
+    <span class="handwritten hero-anim">What we're cooking</span>
+    <h1 class="hero-anim">The Menu</h1>
+    <p class="hero-anim">Seasonal, local, and meant to be shared. We recommend 3–4 plates per person.</p>
+  </header>
+
+  <main>
+    <!-- Menu Tabs -->
+    <section aria-label="Menus">
+      <div class="container">
+        <div class="menu-tabs reveal" role="tablist">
+          <button class="menu-tab active" role="tab" aria-selected="true" data-tab="lunch">Lunch</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-tab="happyhour">Happy Hour</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-tab="dinner">Dinner</button>
+        </div>
+
+        <!-- Lunch -->
+        <div class="menu-panel active" id="lunch" role="tabpanel">
+          <div class="menu-category">
+            <h3 class="menu-category-name">To Start</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Market Greens</span><p class="menu-item-desc">Sherry vinaigrette, shaved pecorino, toasted seeds</p></div><span class="menu-item-price">$16</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasonal Soup</span><p class="menu-item-desc">Changes daily, served with house bread</p></div><span class="menu-item-price">$14</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Burrata</span><p class="menu-item-desc">Grilled bread, chili oil, sea salt, local greens</p></div><span class="menu-item-price">$18</span></div>
+          </div>
+          <div class="menu-category">
+            <h3 class="menu-category-name">Mains</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Smoked Salmon Toast</span><p class="menu-item-desc">Crème fraîche, capers, dill, pickled onion</p></div><span class="menu-item-price">$19</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House-Made Pasta</span><p class="menu-item-desc">Seasonal ragù, parmesan, fresh herbs</p></div><span class="menu-item-price">$22</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Local Halibut</span><p class="menu-item-desc">Brown butter, capers, new potatoes, seasonal veg</p></div><span class="menu-item-price">$26</span></div>
+          </div>
+          <p class="menu-note">Menu changes with the seasons. Ask your server about today's specials.</p>
+        </div>
+
+        <!-- Happy Hour -->
+        <div class="menu-panel" id="happyhour" role="tabpanel">
+          <div class="menu-category">
+            <h3 class="menu-category-name">Bites</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House Fries</span><p class="menu-item-desc">Truffle aioli, fresh herbs, sea salt</p></div><span class="menu-item-price">$9</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Oysters</span><p class="menu-item-desc">Half dozen, classic mignonette</p></div><span class="menu-item-price">$18</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Charcuterie Board</span><p class="menu-item-desc">House selections, pickles, mustard, grilled bread</p></div><span class="menu-item-price">$22</span></div>
+          </div>
+          <div class="menu-category">
+            <h3 class="menu-category-name">Drinks</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Draft Beer</span><p class="menu-item-desc">Rotating local selections</p></div><span class="menu-item-price">$7</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House Wine</span><p class="menu-item-desc">Red or white, low intervention</p></div><span class="menu-item-price">$9</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cocktail of the Day</span><p class="menu-item-desc">Ask your bartender</p></div><span class="menu-item-price">$12</span></div>
+          </div>
+          <p class="menu-note">Happy Hour: Tues – Sat, 2:30–4:30pm &amp; 9–10pm</p>
+        </div>
+
+        <!-- Dinner -->
+        <div class="menu-panel" id="dinner" role="tabpanel">
+          <div class="menu-category">
+            <h3 class="menu-category-name">Small Plates</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hamachi Crudo</span><p class="menu-item-desc">Yuzu, black sesame, microgreens, chili crisp</p></div><span class="menu-item-price">$21</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Duck Confit Crostini</span><p class="menu-item-desc">Cherry compote, arugula, aged balsamic</p></div><span class="menu-item-price">$19</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Roasted Beet Salad</span><p class="menu-item-desc">Whipped goat cheese, walnut, local honey</p></div><span class="menu-item-price">$17</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Wild Mushroom Risotto</span><p class="menu-item-desc">Truffle oil, parmesan, fresh herbs</p></div><span class="menu-item-price">$24</span></div>
+          </div>
+          <div class="menu-category">
+            <h3 class="menu-category-name">Larger Plates</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seared Scallops</span><p class="menu-item-desc">Cauliflower purée, brown butter, capers</p></div><span class="menu-item-price">$28</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Braised Lamb Shoulder</span><p class="menu-item-desc">Soft polenta, gremolata, seasonal vegetables</p></div><span class="menu-item-price">$32</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pan-Seared Halibut</span><p class="menu-item-desc">Beurre blanc, Island vegetables, fresh herbs</p></div><span class="menu-item-price">$34</span></div>
+          </div>
+          <p class="menu-note">We recommend 3–4 plates per person. Menu changes with the seasons.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feast With Us -->
+    <section class="section-warm" id="feast" aria-label="Feast With Us">
+      <div class="container">
+        <div class="feast-grid">
+          <div class="feast-image reveal-scale">
+            <img src="part-and-parcel-bar-illustration.png"
+                 alt="Watercolor illustration of the Part and Parcel bar interior"
+                 loading="lazy" width="800" height="800">
+          </div>
+          <div>
+            <span class="section-label reveal">Let us take the wheel</span>
+            <h2 class="reveal"><span class="brush-underline">Feast With Us</span></h2>
+            <div class="feast-price reveal">$74 <span>per guest</span></div>
+            <p class="reveal" style="color:var(--text-light);">Our signature dining experience. Eight to ten of our favourite seasonal dishes, served family style. The best way to taste the full range of our kitchen.</p>
+            <ul class="feast-details reveal">
+              <li>Eight to ten seasonal courses</li>
+              <li>Served family style, shared at the table</li>
+              <li>Entire table participation required</li>
+              <li>Wine pairing available</li>
+            </ul>
+            <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="btn btn-primary reveal">Book the Feast</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-navy" style="text-align:center;" aria-label="Make a reservation">
+      <div class="container">
+        <span class="section-label reveal" style="color:var(--gold-light);">Ready?</span>
+        <h2 class="reveal" style="color:#fff; margin-bottom:1.5rem;">Reserve Your Table</h2>
+        <p class="reveal" style="max-width:500px; margin:0 auto 2rem; opacity:0.8;">Walk-ins welcome at the bar. Reservations via Tock for 1–8 guests. For larger groups, email us.</p>
+        <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="btn btn-primary reveal">Reserve on Tock</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><img src="part-and-parcel-logo.png" alt="Part and Parcel"></a>
+          <p>Seasonal small plates, creative cocktails &amp; low intervention wines. Cooking for Quadra Village since&nbsp;2013.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="menus.html">Menus</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Reservations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>More</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Order Online</a></li>
+            <li><a href="mailto:contact@partandparcel.ca?subject=Gift%20Card%20Inquiry">Gift Cards</a></li>
+            <li><a href="mailto:contact@partandparcel.ca?subject=Private%20Event%20Inquiry">Private Events</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Part &amp; Parcel. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/partandparcelyyj/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const wash = document.querySelector('.page-wash');
+    setTimeout(() => wash.classList.add('revealed'), 100);
+
+    document.querySelectorAll('a[href$=".html"], a[href^="index"]').forEach(link => {
+      if (link.hostname && link.hostname !== location.hostname) return;
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        wash.classList.remove('revealed');
+        setTimeout(() => window.location.href = link.getAttribute('href'), 500);
+      });
+    });
+
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+    }));
+
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+
+    /* Menu tabs */
+    const tabs = document.querySelectorAll('.menu-tab');
+    const panels = document.querySelectorAll('.menu-panel');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    /* Activate tab from hash */
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      const targetTab = document.querySelector(`[data-tab="${hash}"]`);
+      if (targetTab) targetTab.click();
+    }
+
+    if (reducedMotion) {
+      document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el => {
+        el.style.opacity = '1'; el.style.transform = 'none';
+      });
+      return;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo('.hero-interior .handwritten', { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, delay: 0.2 });
+    gsap.fromTo('.hero-interior h1', { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, delay: 0.35 });
+    gsap.fromTo('.hero-interior p', { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, delay: 0.5 });
+
+    ScrollTrigger.batch('.reveal', {
+      onEnter: b => gsap.to(b, { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: 'power2.out' }),
+      start: 'top 88%'
+    });
+    ScrollTrigger.batch('.reveal-scale', {
+      onEnter: b => gsap.to(b, { opacity: 1, scale: 1, duration: 1, stagger: 0.12, ease: 'power2.out' }),
+      start: 'top 88%'
+    });
+
+    gsap.from('.menu-item', {
+      y: 15, opacity: 0, duration: 0.5, stagger: 0.05,
+      scrollTrigger: { trigger: '.menu-panel.active', start: 'top 80%' }
+    });
+  });
+  </script>
+</body>
+</html>
