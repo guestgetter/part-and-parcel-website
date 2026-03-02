@@ -135,51 +135,46 @@
 
   <!-- Hero -->
   <header class="hero-home">
-    <div class="hero-text">
-      <span class="handwritten hero-anim">Welcome to</span>
-      <h1 class="hero-anim">Part &amp;<br>Parcel</h1>
-      <p class="hero-subtitle hero-anim">Seasonal small plates, creative cocktails &amp; low intervention wines in the heart of Quadra Village, Victoria&nbsp;BC.</p>
-      <div class="hero-ctas hero-anim">
-        <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="btn btn-primary">Reserve a Table</a>
-        <a href="menus.html" class="btn btn-outline">See the Menus</a>
-      </div>
+    <div class="hero-headline hero-anim">
+      <span class="handwritten">Welcome to</span>
+      <h1>Part &amp; Parcel</h1>
     </div>
-    <div class="hero-illustration reveal-scale">
+    <div class="hero-illustration hero-anim">
       <img src="part-and-parcel-front-illustration.png"
            alt="Watercolor illustration of Part and Parcel restaurant storefront in Quadra Village, Victoria BC, with warm golden light glowing through the windows"
            width="800" height="1040">
+    </div>
+    <div class="hero-foot hero-anim">
+      <p class="hero-subtitle">Seasonal small plates, creative cocktails &amp; low intervention wines in the heart of Quadra Village, Victoria&nbsp;BC.</p>
+      <div class="hero-ctas">
+        <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="btn btn-primary">Reserve a Table</a>
+        <a href="menus.html" class="btn btn-outline">See the Menus</a>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- Origin Story -->
-    <section class="section-warm scroll-story-section" aria-label="Our Story">
-      <!-- Chapter 1: The Beginning -->
-      <div class="container story-chapter" id="chapter-begin">
-        <div class="story-content reveal-story">
-          <span class="section-label">Since 2013</span>
-          <h2><span class="brush-underline">A decade of cooking</span> for our&nbsp;neighbourhood</h2>
-          <p class="story-text-reveal" style="margin-top:1.25rem; color:var(--text-light); font-size:1.05rem; line-height:1.8;">
-            What started as a simple idea — great food, warm service, an honest glass of wine — has grown into one of Victoria's most beloved restaurants. We opened our doors in Quadra Village with a mission to serve seasonal, thoughtful food without the pretense.
-          </p>
-        </div>
-        <div class="story-visual reveal-scale-story">
+    <section class="section-warm" aria-label="Our Story">
+      <div class="container story-row">
+        <div class="story-img reveal-scale">
           <img src="part-and-parcel-front-illustration.png" alt="Watercolor illustration of the original storefront" loading="lazy">
         </div>
-      </div>
-
-      <!-- Chapter 2: The Philosophy -->
-      <div class="container story-chapter reversed" id="chapter-philosophy" style="margin-top: -4rem;">
-        <div class="story-content reveal-story" style="direction: ltr;">
-          <span class="section-label">Our Philosophy</span>
-          <h2>Simple, Seasonal, <br><em>Sincere.</em></h2>
-          <p class="story-text-reveal" style="margin-top:1.25rem; color:var(--text-light); font-size:1.05rem; line-height:1.8;">
-            We believe in letting ingredients speak for themselves. Our menu changes with the seasons, highlighting the best produce Vancouver Island has to offer. From our house-made pastas to our creative vegetable-forward plates, every dish tells a story of local abundance.
-          </p>
-          <a href="about.html" class="btn btn-outline" style="margin-top: 2rem;">Read our full story</a>
+        <div class="story-copy">
+          <span class="section-label reveal">Since 2013</span>
+          <h2 class="reveal"><span class="brush-underline">A decade of cooking</span> for our&nbsp;neighbourhood</h2>
+          <p class="reveal">What started as a simple idea — great food, warm service, an honest glass of wine — has grown into one of Victoria's most beloved restaurants. We opened our doors in Quadra Village with a mission to serve seasonal, thoughtful food without the pretense.</p>
         </div>
-        <div class="story-visual reveal-scale-story">
+      </div>
+      <div class="container story-row story-row--flip">
+        <div class="story-img reveal-scale">
           <img src="part-and-parcel-bar-illustration.png" alt="Illustration of our cozy bar and dining room" loading="lazy">
+        </div>
+        <div class="story-copy">
+          <span class="section-label reveal">Our Philosophy</span>
+          <h2 class="reveal">Simple, Seasonal, <em>Sincere.</em></h2>
+          <p class="reveal">We believe in letting ingredients speak for themselves. Our menu changes with the seasons, highlighting the best produce Vancouver Island has to offer. From our house-made pastas to our creative vegetable-forward plates, every dish tells a story of local abundance.</p>
+          <a href="about.html" class="btn btn-outline reveal" style="margin-top: 1.5rem;">Read our full story</a>
         </div>
       </div>
     </section>
@@ -214,65 +209,15 @@
       </div>
     </section>
 
-    <!-- Neighborhood Map -->
-    <section class="neighborhood-section" aria-label="Neighborhood Map">
-      <div class="container">
-         <div style="text-align:center; margin-bottom:var(--space-lg);">
-          <span class="section-label reveal">Quadra Village</span>
-          <h2 class="reveal">Our Neighbourhood</h2>
-          <p class="reveal" style="max-width: 500px; margin: 1rem auto; color: var(--text-light);">We're proud to call Quadra Village home. Find us just up the street from Crystal Pool and next to Beacon Thrift.</p>
-        </div>
-        
-        <div class="neighborhood-map-container reveal-scale">
-          <!-- Hand-drawn style map elements could be SVGs, but we'll use CSS markers for now -->
-          
-          <!-- Part & Parcel Marker -->
-          <div class="map-marker pp-marker" style="top: 50%; left: 50%;">
-            <div class="marker-dot"></div>
-            <div class="marker-label">Part & Parcel</div>
-          </div>
-
-          <!-- Parking Marker -->
-          <div class="map-marker" style="top: 40%; left: 65%;">
-             <div class="marker-dot" style="background: var(--terracotta);"></div>
-             <div class="marker-label">Parking</div>
-          </div>
-          
-           <!-- Beacon Thrift (Approximate relative location for flavor) -->
-          <div class="map-marker" style="top: 55%; left: 35%;">
-             <div class="marker-dot" style="background: var(--sage);"></div>
-             <div class="marker-label">Beacon Thrift</div>
-          </div>
-        </div>
-        
-        <div style="text-align:center; margin-top: 2rem;">
-           <a href="https://maps.app.goo.gl/YourGoogleMapsLinkHere" target="_blank" rel="noopener" class="btn btn-outline reveal">Get Directions</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Feast With Us -->
-    <section class="section-warm" aria-label="Feast With Us tasting experience">
-      <div class="container">
-        <div class="feast-grid">
-          <div class="feast-image reveal-scale">
-            <img src="part-and-parcel-bar-illustration.png"
-                 alt="Watercolor illustration of the Part and Parcel bar with wooden countertop, metal stools, and shelves of bottles"
-                 loading="lazy" width="800" height="800">
-          </div>
-          <div>
-            <span class="section-label reveal">The full experience</span>
-            <h2 class="reveal"><span class="brush-underline">Feast With Us</span></h2>
-            <div class="feast-price reveal">$74 <span>per guest</span></div>
-            <p class="reveal" style="color:var(--text-light);">Let our kitchen take you on a journey. Our nightly tasting menu features our favourite seasonal dishes, served family style to the whole table.</p>
-            <ul class="feast-details reveal">
-              <li>Eight to ten seasonal courses</li>
-              <li>Served family style, shared at the table</li>
-              <li>Entire table participation required</li>
-              <li>Wine pairing available</li>
-            </ul>
-            <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="btn btn-primary reveal feast-glow">Book the Feast</a>
-          </div>
+    <section aria-label="Feast With Us tasting experience">
+      <div class="container feast-feature">
+        <div class="feast-text" style="text-align:center; max-width:580px; margin:0 auto;">
+          <span class="section-label reveal">The full experience</span>
+          <h2 class="reveal"><span class="brush-underline">Feast With Us</span></h2>
+          <div class="feast-price reveal">$74 <span>per guest</span></div>
+          <p class="reveal" style="color:var(--text-light); margin-top:1rem;">Let our kitchen take you on a journey. Eight to ten of our favourite seasonal dishes, served family style to the whole table. Wine pairing available.</p>
+          <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="btn btn-primary reveal" style="margin-top:2rem;">Book the Feast</a>
         </div>
       </div>
     </section>
@@ -410,15 +355,15 @@
     });
     gsap.ticker.lagSmoothing(0);
 
-    /* Hero entrance */
-    gsap.fromTo('.hero-text .handwritten', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, delay: 0.3 });
-    gsap.fromTo('.hero-text h1', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1, delay: 0.5 });
-    gsap.fromTo('.hero-subtitle', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, delay: 0.7 });
-    gsap.fromTo('.hero-ctas', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, delay: 0.85 });
-    gsap.fromTo('.hero-illustration img',
-      { scale: 0.92, opacity: 0, filter: 'blur(6px)' },
-      { scale: 1, opacity: 1, filter: 'blur(0px)', duration: 1.3, delay: 0.4, ease: 'power2.out' }
-    );
+    /* Hero entrance — staggered cascade */
+    const heroTl = gsap.timeline({ delay: 0.2 });
+    heroTl
+      .fromTo('.hero-headline .handwritten', { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' })
+      .fromTo('.hero-headline h1', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: 'power2.out' }, '-=0.4')
+      .fromTo('.hero-illustration img',
+        { scale: 0.94, opacity: 0, filter: 'blur(5px)' },
+        { scale: 1, opacity: 1, filter: 'blur(0px)', duration: 1.4, ease: 'power2.out' }, '-=0.5')
+      .fromTo('.hero-foot', { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.6');
 
     /* Scroll reveals */
     ScrollTrigger.batch('.reveal', {
@@ -429,28 +374,25 @@
       onEnter: batch => gsap.to(batch, { opacity: 1, scale: 1, duration: 1, stagger: 0.12, ease: 'power2.out' }),
       start: 'top 88%'
     });
-    ScrollTrigger.batch('.reveal-left', {
-      onEnter: batch => gsap.to(batch, { opacity: 1, x: 0, duration: 0.9, stagger: 0.1, ease: 'power2.out' }),
-      start: 'top 85%'
-    });
 
     /* Brush stroke underline draw-in */
     document.querySelectorAll('.brush-underline').forEach(el => {
-      const after = el;
-      gsap.fromTo(after, { '--brush-scale': 0 }, {
+      gsap.fromTo(el, { '--brush-scale': 0 }, {
         '--brush-scale': 1, duration: 0.8, ease: 'power2.out',
         scrollTrigger: { trigger: el, start: 'top 80%' }
       });
     });
 
-    /* Illustration "drying" effect — subtle hover parallax via mousemove */
-    const illustration = document.querySelector('.hero-illustration img');
-    if (illustration && window.innerWidth > 900) {
-      document.addEventListener('mousemove', e => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 8;
-        const y = (e.clientY / window.innerHeight - 0.5) * 8;
-        illustration.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.05}deg)`;
-      });
+    /* Subtle parallax on hero illustration */
+    if (window.innerWidth > 900) {
+      const heroImg = document.querySelector('.hero-illustration img');
+      if (heroImg) {
+        document.addEventListener('mousemove', e => {
+          const x = (e.clientX / window.innerWidth - 0.5) * 6;
+          const y = (e.clientY / window.innerHeight - 0.5) * 6;
+          heroImg.style.transform = `translate(${x}px, ${y}px)`;
+        });
+      }
     }
 
     /* Experience cards stagger */
@@ -459,37 +401,10 @@
       scrollTrigger: { trigger: '.experience-grid', start: 'top 80%' }
     });
 
-    /* Story Chapter Reveals */
-    gsap.utils.toArray('.story-chapter').forEach((chapter, i) => {
-      const content = chapter.querySelector('.story-content');
-      const visual = chapter.querySelector('.story-visual');
-      const textReveal = chapter.querySelector('.story-text-reveal');
-      
-      if (!content || !visual) return; // Safety check
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: chapter,
-          start: 'top 75%',
-          toggleActions: 'play none none reverse'
-        }
-      });
-      
-      // Determine direction based on index or class
-      const xOffset = chapter.classList.contains('reversed') ? 50 : -50;
-
-      tl.from(content, { opacity: 0, x: xOffset, duration: 1, ease: 'power2.out' })
-        .from(visual, { opacity: 0, scale: 0.95, duration: 1.2, ease: 'power2.out' }, '-=0.8');
-        
-      if(textReveal) {
-         tl.from(textReveal, { opacity: 0, y: 20, duration: 0.8 }, '-=0.6');
-      }
-    });
-
-    /* Parallax for Story Images */
-    gsap.utils.toArray('.story-visual img, .feast-image img').forEach((img) => {
+    /* Story image parallax */
+    gsap.utils.toArray('.story-img img').forEach(img => {
       gsap.to(img, {
-        yPercent: -10,
+        yPercent: -8,
         ease: 'none',
         scrollTrigger: {
           trigger: img.parentElement,
