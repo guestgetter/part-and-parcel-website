@@ -22,33 +22,6 @@
   <meta name="twitter:description" content="A decade of seasonal cooking in Quadra Village and the story behind Part & Parcel.">
   <meta name="twitter:image" content="https://www.partandparcel.ca/part-and-parcel-front-illustration.png">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "Our Story | Part & Parcel",
-    "url": "https://www.partandparcel.ca/about.html",
-    "description": "The story and philosophy behind Part & Parcel in Quadra Village, Victoria BC.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Part & Parcel",
-      "url": "https://www.partandparcel.ca/"
-    },
-    "about": {
-      "@type": "Restaurant",
-      "name": "Part & Parcel",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2656 Quadra St",
-        "addressLocality": "Victoria",
-        "addressRegion": "BC",
-        "postalCode": "V8T 4E4",
-        "addressCountry": "CA"
-      }
-    }
-  }
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -58,7 +31,6 @@
 </head>
 
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="page-wash" aria-hidden="true"></div>
   <div aria-hidden="true">
     <div class="wc-spot wc-spot-1"></div>
@@ -93,7 +65,7 @@
     <p class="hero-anim">Over a decade of cooking for Quadra Village.</p>
   </header>
 
-  <main id="main-content">
+  <main>
     <!-- Story -->
     <section aria-label="Our story">
       <div class="container">
@@ -106,15 +78,9 @@
             <p class="reveal">From our very first service to today, our goal has stayed the same: to be the kind of place where you feel at home the moment you walk through the door.</p>
           </div>
           <div class="story-image reveal-scale">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="part-and-parcel-front-illustration-960.webp 960w, part-and-parcel-front-illustration-1600.webp 1600w"
-                sizes="(max-width: 900px) 350px, (max-width: 1200px) 42vw, 480px">
-              <img src="part-and-parcel-front-illustration.png"
-                   alt="Watercolor illustration of Part and Parcel storefront with warm light and navy awning"
-                   loading="lazy" width="800" height="1040">
-            </picture>
+            <img src="part-and-parcel-front-illustration.png"
+                 alt="Watercolor illustration of Part and Parcel storefront with warm light and navy awning"
+                 loading="lazy" width="800" height="1040">
           </div>
         </div>
       </div>
@@ -138,15 +104,9 @@
       <div class="container">
         <div class="story-grid">
           <div class="feast-image reveal-scale">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="part-and-parcel-bar-illustration-960.webp 960w, part-and-parcel-bar-illustration-1600.webp 1600w"
-                sizes="(max-width: 900px) 350px, (max-width: 1200px) 42vw, 500px">
-              <img src="part-and-parcel-bar-illustration.png"
-                   alt="Watercolor illustration of the Part and Parcel bar with wooden countertop and metal stools"
-                   loading="lazy" width="800" height="800">
-            </picture>
+            <img src="part-and-parcel-bar-illustration.png"
+                 alt="Watercolor illustration of the Part and Parcel bar with wooden countertop and metal stools"
+                 loading="lazy" width="800" height="800">
           </div>
           <div class="story-text">
             <span class="section-label reveal">What drives us</span>
@@ -243,43 +203,15 @@
 
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
-    const menuLinks = mobileMenu.querySelectorAll('a');
-    const closeMenu = () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    };
-    const openMenu = () => {
-      hamburger.classList.add('open');
-      mobileMenu.classList.add('open');
-      mobileMenu.setAttribute('aria-hidden', 'false');
-      hamburger.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-      if (menuLinks[0]) menuLinks[0].focus();
-    };
-    mobileMenu.setAttribute('aria-hidden', 'true');
     hamburger.addEventListener('click', () => {
-      const open = !hamburger.classList.contains('open');
-      if (open) openMenu();
-      else closeMenu();
+      const open = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-    menuLinks.forEach(a => a.addEventListener('click', closeMenu));
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeMenu();
-      if (e.key === 'Tab' && hamburger.classList.contains('open') && menuLinks.length) {
-        const first = menuLinks[0];
-        const last = menuLinks[menuLinks.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
-      }
-    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+    }));
 
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });

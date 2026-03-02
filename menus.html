@@ -47,7 +47,6 @@
 </head>
 
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="page-wash" aria-hidden="true"></div>
   <div aria-hidden="true">
     <div class="wc-spot wc-spot-1"></div>
@@ -83,18 +82,18 @@
     <p class="hero-anim">Seasonal, local, and meant to be shared. We recommend 3–4 plates per person.</p>
   </header>
 
-  <main id="main-content">
+  <main>
     <!-- Menu Tabs -->
     <section aria-label="Menus">
       <div class="container">
         <div class="menu-tabs reveal" role="tablist">
-          <button class="menu-tab active" id="tab-lunch" role="tab" aria-controls="lunch" aria-selected="true" tabindex="0" data-tab="lunch">Lunch</button>
-          <button class="menu-tab" id="tab-happyhour" role="tab" aria-controls="happyhour" aria-selected="false" tabindex="-1" data-tab="happyhour">Happy Hour</button>
-          <button class="menu-tab" id="tab-dinner" role="tab" aria-controls="dinner" aria-selected="false" tabindex="-1" data-tab="dinner">Dinner</button>
+          <button class="menu-tab active" role="tab" aria-selected="true" data-tab="lunch">Lunch</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-tab="happyhour">Happy Hour</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-tab="dinner">Dinner</button>
         </div>
 
         <!-- Lunch -->
-        <div class="menu-panel active" id="lunch" role="tabpanel" aria-labelledby="tab-lunch">
+        <div class="menu-panel active" id="lunch" role="tabpanel">
           <div class="menu-category">
             <h3 class="menu-category-name">To Start</h3>
             <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Market Greens</span><p class="menu-item-desc">Sherry vinaigrette, shaved pecorino, toasted seeds</p></div><span class="menu-item-price">$16</span></div>
@@ -111,7 +110,7 @@
         </div>
 
         <!-- Happy Hour -->
-        <div class="menu-panel" id="happyhour" role="tabpanel" aria-labelledby="tab-happyhour">
+        <div class="menu-panel" id="happyhour" role="tabpanel">
           <div class="menu-category">
             <h3 class="menu-category-name">Bites</h3>
             <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House Fries</span><p class="menu-item-desc">Truffle aioli, fresh herbs, sea salt</p></div><span class="menu-item-price">$9</span></div>
@@ -128,7 +127,7 @@
         </div>
 
         <!-- Dinner -->
-        <div class="menu-panel" id="dinner" role="tabpanel" aria-labelledby="tab-dinner">
+        <div class="menu-panel" id="dinner" role="tabpanel">
           <div class="menu-category">
             <h3 class="menu-category-name">Small Plates</h3>
             <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hamachi Crudo</span><p class="menu-item-desc">Yuzu, black sesame, microgreens, chili crisp</p></div><span class="menu-item-price">$21</span></div>
@@ -147,41 +146,14 @@
       </div>
     </section>
 
-    <section class="section-warm" aria-label="Victoria dining highlights">
-      <div class="container" style="text-align:center;">
-        <span class="section-label reveal">Victoria dining guide</span>
-        <h2 class="reveal">What Locals Search For</h2>
-        <div class="intent-grid">
-          <article class="intent-card reveal">
-            <h3>Happy Hour in Quadra Village</h3>
-            <p>Join us Tuesday to Saturday from 2:30-4:30pm, plus late night happy hour from 9-10pm with snacks, oysters, and drink features.</p>
-          </article>
-          <article class="intent-card reveal">
-            <h3>Date Night in Victoria BC</h3>
-            <p>Seasonal small plates, low intervention wines, and our full evening menu make Part &amp; Parcel a go-to date night spot in Victoria.</p>
-          </article>
-          <article class="intent-card reveal">
-            <h3>Group Dining and Celebrations</h3>
-            <p>Book a shared Feast With Us experience for birthdays, anniversaries, and special nights out. Email us for larger group requests.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- Feast With Us -->
     <section class="section-warm" id="feast" aria-label="Feast With Us">
       <div class="container">
         <div class="feast-grid">
           <div class="feast-image reveal-scale">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="part-and-parcel-bar-illustration-960.webp 960w, part-and-parcel-bar-illustration-1600.webp 1600w"
-                sizes="(max-width: 900px) 350px, (max-width: 1200px) 42vw, 500px">
-              <img src="part-and-parcel-bar-illustration.png"
-                   alt="Watercolor illustration of the Part and Parcel bar interior"
-                   loading="lazy" width="800" height="800">
-            </picture>
+            <img src="part-and-parcel-bar-illustration.png"
+                 alt="Watercolor illustration of the Part and Parcel bar interior"
+                 loading="lazy" width="800" height="800">
           </div>
           <div>
             <span class="section-label reveal">Let us take the wheel</span>
@@ -207,20 +179,6 @@
         <h2 class="reveal" style="color:#fff; margin-bottom:1.5rem;">Reserve Your Table</h2>
         <p class="reveal" style="max-width:500px; margin:0 auto 2rem; opacity:0.8;">Walk-ins welcome at the bar. Reservations via Tock for 1–8 guests. For larger groups, email us.</p>
         <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="btn btn-primary reveal">Reserve on Tock</a>
-        <div class="trust-strip">
-          <div class="trust-pill reveal">
-            <strong>Seasonal menu all year</strong>
-            <span>Regularly refreshed with local produce</span>
-          </div>
-          <div class="trust-pill reveal">
-            <strong>Feast With Us available nightly</strong>
-            <span>Eight to ten seasonal dishes</span>
-          </div>
-          <div class="trust-pill reveal">
-            <strong>Walk-ins still welcome</strong>
-            <span>Bar seats kept open each service</span>
-          </div>
-        </div>
       </div>
     </section>
   </main>
@@ -279,43 +237,15 @@
 
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
-    const menuLinks = mobileMenu.querySelectorAll('a');
-    const closeMenu = () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    };
-    const openMenu = () => {
-      hamburger.classList.add('open');
-      mobileMenu.classList.add('open');
-      mobileMenu.setAttribute('aria-hidden', 'false');
-      hamburger.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-      if (menuLinks[0]) menuLinks[0].focus();
-    };
-    mobileMenu.setAttribute('aria-hidden', 'true');
     hamburger.addEventListener('click', () => {
-      const open = !hamburger.classList.contains('open');
-      if (open) openMenu();
-      else closeMenu();
+      const open = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-    menuLinks.forEach(a => a.addEventListener('click', closeMenu));
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeMenu();
-      if (e.key === 'Tab' && hamburger.classList.contains('open') && menuLinks.length) {
-        const first = menuLinks[0];
-        const last = menuLinks[menuLinks.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
-      }
-    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+    }));
 
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });
@@ -324,38 +254,13 @@
     /* Menu tabs */
     const tabs = document.querySelectorAll('.menu-tab');
     const panels = document.querySelectorAll('.menu-panel');
-    const activateTab = tab => {
-      tabs.forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-        t.setAttribute('tabindex', '-1');
-      });
-      panels.forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-      tab.setAttribute('tabindex', '0');
-      document.getElementById(tab.dataset.tab).classList.add('active');
-      tab.focus();
-    };
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        activateTab(tab);
-      });
-      tab.addEventListener('keydown', e => {
-        const currentIndex = Array.from(tabs).indexOf(tab);
-        if (e.key === 'ArrowRight') {
-          e.preventDefault();
-          activateTab(tabs[(currentIndex + 1) % tabs.length]);
-        } else if (e.key === 'ArrowLeft') {
-          e.preventDefault();
-          activateTab(tabs[(currentIndex - 1 + tabs.length) % tabs.length]);
-        } else if (e.key === 'Home') {
-          e.preventDefault();
-          activateTab(tabs[0]);
-        } else if (e.key === 'End') {
-          e.preventDefault();
-          activateTab(tabs[tabs.length - 1]);
-        }
+        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById(tab.dataset.tab).classList.add('active');
       });
     });
 
@@ -363,7 +268,7 @@
     const hash = window.location.hash.replace('#', '');
     if (hash) {
       const targetTab = document.querySelector(`[data-tab="${hash}"]`);
-      if (targetTab) activateTab(targetTab);
+      if (targetTab) targetTab.click();
     }
 
     if (reducedMotion) {

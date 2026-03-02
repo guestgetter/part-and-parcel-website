@@ -22,58 +22,6 @@
   <meta name="twitter:description" content="Visit Part & Parcel in Quadra Village for lunch, happy hour, dinner, and reservations.">
   <meta name="twitter:image" content="https://www.partandparcel.ca/part-and-parcel-front-illustration.png">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Visit Part & Parcel",
-    "url": "https://www.partandparcel.ca/visit.html",
-    "about": {
-      "@type": "Restaurant",
-      "name": "Part & Parcel",
-      "telephone": "+17784060888",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2656 Quadra St",
-        "addressLocality": "Victoria",
-        "addressRegion": "BC",
-        "postalCode": "V8T 4E4",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 48.4384,
-        "longitude": -123.3555
-      }
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Where can I park at Part & Parcel?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Designated parking is available beside Beacon Thrift Shop, with additional street parking on Quadra Street and more parking in the Quadra Village lot across the street."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I walk in without a reservation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Reservations are available for groups of 1-8 through Tock, and walk-ins are always welcome at the bar."
-        }
-      }
-    ]
-  }
-  </script>
-
   <meta name="geo.region" content="CA-BC">
   <meta name="geo.placename" content="Victoria">
   <meta name="geo.position" content="48.4384;-123.3555">
@@ -87,7 +35,6 @@
 </head>
 
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="page-wash" aria-hidden="true"></div>
   <div aria-hidden="true">
     <div class="wc-spot wc-spot-1"></div>
@@ -122,7 +69,7 @@
     <p class="hero-anim">Quadra Village, Victoria BC. Walk-ins always welcome at the bar.</p>
   </header>
 
-  <main id="main-content">
+  <main>
     <!-- Visit Details -->
     <section aria-label="Location and hours">
       <div class="container">
@@ -166,41 +113,14 @@
       </div>
     </section>
 
-    <section class="section-warm" aria-label="How to plan your visit">
-      <div class="container" style="text-align:center;">
-        <span class="section-label reveal">Plan your night out</span>
-        <h2 class="reveal">Local Visit Tips</h2>
-        <div class="intent-grid">
-          <article class="intent-card reveal">
-            <h3>Near Downtown Victoria</h3>
-            <p>Part &amp; Parcel sits in Quadra Village, making it an easy dinner stop before or after events around central Victoria.</p>
-          </article>
-          <article class="intent-card reveal">
-            <h3>Parking Made Easy</h3>
-            <p>Use the designated spots beside Beacon Thrift Shop, nearby street parking on Quadra, or the village lot across the street.</p>
-          </article>
-          <article class="intent-card reveal">
-            <h3>Reservations + Walk-ins</h3>
-            <p>Reserve on Tock for groups of 1-8, and keep spontaneity with walk-in bar seating available every service.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- Illustration Feature -->
     <section class="section-warm" style="text-align:center;" aria-label="Restaurant illustration">
       <div class="container" style="max-width:600px;">
         <div class="reveal-scale">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="part-and-parcel-front-illustration-960.webp 960w, part-and-parcel-front-illustration-1600.webp 1600w"
-              sizes="(max-width: 900px) 320px, 420px">
-            <img src="part-and-parcel-front-illustration.png"
-                 alt="Watercolor illustration of Part and Parcel storefront in Quadra Village"
-                 loading="lazy" width="800" height="1040"
-                 style="max-width:420px; margin:0 auto; filter:drop-shadow(0 6px 20px rgba(0,0,0,0.06));">
-          </picture>
+          <img src="part-and-parcel-front-illustration.png"
+               alt="Watercolor illustration of Part and Parcel storefront in Quadra Village"
+               loading="lazy" width="800" height="1040"
+               style="max-width:420px; margin:0 auto; filter:drop-shadow(0 6px 20px rgba(0,0,0,0.06));">
         </div>
         <p class="reveal" style="margin-top:2rem; font-family:var(--font-handwritten); font-size:1.3rem; color:var(--terracotta);">We saved you a seat.</p>
       </div>
@@ -285,43 +205,15 @@
 
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
-    const menuLinks = mobileMenu.querySelectorAll('a');
-    const closeMenu = () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    };
-    const openMenu = () => {
-      hamburger.classList.add('open');
-      mobileMenu.classList.add('open');
-      mobileMenu.setAttribute('aria-hidden', 'false');
-      hamburger.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-      if (menuLinks[0]) menuLinks[0].focus();
-    };
-    mobileMenu.setAttribute('aria-hidden', 'true');
     hamburger.addEventListener('click', () => {
-      const open = !hamburger.classList.contains('open');
-      if (open) openMenu();
-      else closeMenu();
+      const open = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-    menuLinks.forEach(a => a.addEventListener('click', closeMenu));
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeMenu();
-      if (e.key === 'Tab' && hamburger.classList.contains('open') && menuLinks.length) {
-        const first = menuLinks[0];
-        const last = menuLinks[menuLinks.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
-      }
-    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+    }));
 
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });
