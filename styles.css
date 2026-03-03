@@ -70,7 +70,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
@@ -218,8 +218,8 @@ nav.scrolled .nav-logo img { height: 36px; }
 .nav-links a {
   position: relative;
   font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--text-light);
   transition: color 0.3s;
@@ -797,7 +797,16 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
 }
 .testimonial-card {
   position: relative;
-  padding: 0.5rem 0;
+  padding: 2rem;
+  background: rgba(255,255,255,0.6);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
 }
 .testimonial-card::before {
   content: '\201C';
@@ -807,17 +816,19 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
   color: var(--terracotta);
   opacity: 0.3;
   position: absolute;
-  top: -0.5rem;
-  left: -0.25rem;
+  top: 1rem;
+  left: 1rem;
 }
 .testimonial-card blockquote {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--navy);
-  margin-bottom: 1rem;
-  padding-left: 0.25rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 .testimonial-attribution {
   display: flex;
