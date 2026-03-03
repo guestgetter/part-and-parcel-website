@@ -100,6 +100,8 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-to-content">Skip to content</a>
+
   <!-- Page Transition Wash -->
   <div class="page-wash" aria-hidden="true"></div>
 
@@ -111,11 +113,14 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" role="dialog" aria-label="Navigation">
-    <a href="index.html">Home</a>
+  <div class="mobile-menu" role="dialog" aria-label="Navigation" aria-modal="true">
+    <a href="index.html" class="active" aria-current="page">Home</a>
     <a href="menus.html">Menus</a>
     <a href="about.html">Our Story</a>
     <a href="visit.html">Visit</a>
+    <a href="visit.html#private-events">Private Events</a>
+    <a href="https://app.squareup.com/gift/F8BZVSX8VPB13/order" target="_blank" rel="noopener">Gift Cards</a>
+    <a href="https://order.online/store/2210796?pickup=true&redirected=true" target="_blank" rel="noopener">Order Online</a>
     <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Reservations</a>
   </div>
 
@@ -126,6 +131,9 @@
       <a href="menus.html">Menus</a>
       <a href="about.html">Our Story</a>
       <a href="visit.html">Visit</a>
+      <a href="visit.html#private-events">Private Events</a>
+      <a href="https://app.squareup.com/gift/F8BZVSX8VPB13/order" target="_blank" rel="noopener">Gift Cards</a>
+      <a href="https://order.online/store/2210796?pickup=true&redirected=true" target="_blank" rel="noopener">Order Online</a>
       <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="nav-cta">Reserve</a>
     </div>
     <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -140,9 +148,9 @@
       <h1>Part &amp; Parcel</h1>
     </div>
     <div class="hero-illustration hero-anim">
-      <img src="part-and-parcel-front-illustration.png"
+      <img src="part-and-parcel-hero-exterior.png"
            alt="Watercolor illustration of Part and Parcel restaurant storefront in Quadra Village, Victoria BC, with warm golden light glowing through the windows"
-           width="800" height="1040">
+           width="800" height="800">
     </div>
     <div class="hero-foot hero-anim">
       <p class="hero-subtitle">Seasonal small plates, creative cocktails &amp; low intervention wines in the heart of Quadra Village, Victoria&nbsp;BC.</p>
@@ -153,12 +161,15 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Origin Story -->
     <section class="section-warm" aria-label="Our Story">
       <div class="container story-row">
         <div class="story-img reveal-scale">
-          <img src="part-and-parcel-front-illustration.png" alt="Watercolor illustration of the original storefront" loading="lazy">
+          <picture>
+            <source srcset="part-and-parcel-front-illustration-960.webp 960w, part-and-parcel-front-illustration-1600.webp 1600w" sizes="(max-width: 900px) 320px, 440px" type="image/webp">
+            <img src="part-and-parcel-front-illustration.png" alt="Watercolor illustration of the original storefront" loading="lazy">
+          </picture>
         </div>
         <div class="story-copy">
           <span class="section-label reveal">Since 2013</span>
@@ -168,7 +179,7 @@
       </div>
       <div class="container story-row story-row--flip">
         <div class="story-img reveal-scale">
-          <img src="part-and-parcel-bar-illustration.png" alt="Illustration of our cozy bar and dining room" loading="lazy">
+          <img src="part-and-parcel-interior-dining-illustrated.png" alt="Watercolor illustration of the Part and Parcel dining room with wooden tables, fresh flowers, and warm lighting" loading="lazy">
         </div>
         <div class="story-copy">
           <span class="section-label reveal">Our Philosophy</span>
@@ -187,20 +198,17 @@
           <h2 class="reveal">Join Us</h2>
         </div>
         <div class="experience-grid">
-          <a href="menus.html#lunch" class="experience-card reveal">
-            <div class="card-icon">&#9788;</div>
+          <a href="menus.html#lunch" class="experience-card">
             <h3>Lunch</h3>
             <p class="card-hours">11:30am – 4:30pm</p>
             <p>Bright, seasonal plates and house-made pastas to fuel your afternoon. Available Tuesday through Saturday.</p>
           </a>
-          <a href="menus.html#happyhour" class="experience-card reveal">
-            <div class="card-icon">&#9830;</div>
+          <a href="menus.html#happyhour" class="experience-card">
             <h3>Happy Hour</h3>
             <p class="card-hours">2:30 – 4:30pm &amp; 9 – 10pm</p>
             <p>Oysters, snacks, local drafts and cocktail specials. Pull up a stool at the bar — walk-ins always welcome.</p>
           </a>
-          <a href="menus.html#dinner" class="experience-card reveal">
-            <div class="card-icon">&#9790;</div>
+          <a href="menus.html#dinner" class="experience-card">
             <h3>Dinner</h3>
             <p class="card-hours">4:30 – 10pm</p>
             <p>The full P&amp;P experience. Seasonal small plates, low intervention wines, and creative cocktails. Perfect for date&nbsp;night.</p>
@@ -215,8 +223,8 @@
         <div class="feast-text" style="text-align:center; max-width:580px; margin:0 auto;">
           <span class="section-label reveal">The full experience</span>
           <h2 class="reveal"><span class="brush-underline">Feast With Us</span></h2>
-          <div class="feast-price reveal">$74 <span>per guest</span></div>
-          <p class="reveal" style="color:var(--text-light); margin-top:1rem;">Let our kitchen take you on a journey. Eight to ten of our favourite seasonal dishes, served family style to the whole table. Wine pairing available.</p>
+          <div class="feast-price reveal">$74 <span>per person</span></div>
+          <p class="reveal" style="color:var(--text-light); margin-top:1rem;">A journey through 8 of our favourite dishes, served for sharing, with a surprise or two. Includes dessert. Optional drink pairing add $49.</p>
           <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="btn btn-primary reveal" style="margin-top:2rem;">Book the Feast</a>
         </div>
       </div>
@@ -242,6 +250,60 @@
       </div>
     </section>
 
+    <!-- Testimonials -->
+    <section aria-label="What guests are saying">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:var(--space-lg);">
+          <span class="section-label reveal">What people are saying</span>
+          <h2 class="reveal">From Our Guests</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <blockquote>The food is always inventive and delicious, the atmosphere is chill and comfy and the service is professional and knowledgeable.</blockquote>
+            <hr class="testimonial-divider">
+            <div class="testimonial-attribution">
+              <cite>Justin</cite>
+              <span class="testimonial-source">via OpenTable</span>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <blockquote>Best chicken sandwich in town and the charred broccoli sandwich is unique and superb.</blockquote>
+            <hr class="testimonial-divider">
+            <div class="testimonial-attribution">
+              <cite>Helen</cite>
+              <span class="testimonial-source">via OpenTable</span>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <blockquote>Fantastic dining experience — food was exceptional and inventive. Refreshing discovery. We will return.</blockquote>
+            <hr class="testimonial-divider">
+            <div class="testimonial-attribution">
+              <cite>Nikki</cite>
+              <span class="testimonial-source">via OpenTable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section aria-label="Gallery">
+      <div class="container" style="max-width:1400px; padding:0;">
+        <div style="text-align:center; margin-bottom:var(--space-md); padding:0 2rem;">
+          <span class="section-label reveal">A look inside</span>
+          <h2 class="reveal">Life at P&amp;P</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal-scale"><img src="photos/A7302806.jpg" alt="Food at Part and Parcel" loading="lazy"></div>
+          <div class="gallery-item reveal-scale"><img src="photos/A7302915.jpg" alt="Plated dish" loading="lazy"></div>
+          <div class="gallery-item reveal-scale"><img src="photos/A7302998.jpg" alt="Restaurant atmosphere" loading="lazy"></div>
+          <div class="gallery-item reveal-scale"><img src="photos/A7307863.jpg" alt="Seasonal cooking" loading="lazy"></div>
+          <div class="gallery-item reveal-scale"><img src="photos/A7307910.jpg" alt="Dining at P&amp;P" loading="lazy"></div>
+          <div class="gallery-item reveal-scale"><img src="photos/best-dinner-quadra-village-victoria-bc.jpg" alt="Dinner spread" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Newsletter -->
     <section class="newsletter" aria-label="Newsletter signup">
       <div class="container">
@@ -256,6 +318,10 @@
       </div>
     </section>
   </main>
+
+  <div class="footer-illustration" aria-hidden="true">
+    <img src="illustrations/part-and-parcel-footer-illustration.png" alt="Watercolor streetscape of Quadra Village" loading="lazy">
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -277,8 +343,8 @@
         <div>
           <h4>More</h4>
           <ul class="footer-links">
-            <li><a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Order Online</a></li>
-            <li><a href="mailto:contact@partandparcel.ca?subject=Gift%20Card%20Inquiry">Gift Cards</a></li>
+            <li><a href="https://order.online/store/2210796?pickup=true&redirected=true" target="_blank" rel="noopener">Order Online</a></li>
+            <li><a href="https://app.squareup.com/gift/F8BZVSX8VPB13/order" target="_blank" rel="noopener">Gift Cards</a></li>
             <li><a href="mailto:contact@partandparcel.ca?subject=Private%20Event%20Inquiry">Private Events</a></li>
             <li><a href="mailto:contact@partandparcel.ca?subject=Careers%20at%20Part%20and%20Parcel">Careers</a></li>
           </ul>
@@ -329,6 +395,16 @@
         mobileMenu.classList.remove('open');
         document.body.style.overflow = '';
       });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
     });
 
     /* Nav scroll */
@@ -403,11 +479,6 @@
       });
     });
 
-    /* Experience cards stagger */
-    gsap.from('.experience-card', {
-      y: 40, opacity: 0, duration: 0.7, stagger: 0.15,
-      scrollTrigger: { trigger: '.experience-grid', start: 'top 80%' }
-    });
 
     /* Story image parallax */
     gsap.utils.toArray('.story-img img').forEach(img => {
