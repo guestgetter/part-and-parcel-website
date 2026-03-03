@@ -332,29 +332,30 @@ nav.scrolled .nav-logo img { height: 36px; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: calc(var(--nav-height) + 2rem) 2rem 3rem;
+  padding: calc(var(--nav-height) + 1rem) 2rem 3rem;
   position: relative;
   z-index: 1;
-  gap: 1.5rem;
+  gap: 0.75rem;
 }
 .hero-headline .handwritten {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: var(--terracotta);
   display: block;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0;
 }
 .hero-headline h1 {
   margin-bottom: 0;
   letter-spacing: 0.01em;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
 }
 .hero-illustration {
   display: flex;
   justify-content: center;
-  padding: 0.5rem 0;
+  padding: 0;
 }
 .hero-illustration img {
   width: 100%;
-  max-width: 420px;
+  max-width: 540px;
   filter: drop-shadow(0 12px 40px rgba(43,58,92,0.08));
   transition: transform 0.6s cubic-bezier(.25,.46,.45,.94);
   mix-blend-mode: multiply;
@@ -363,10 +364,11 @@ nav.scrolled .nav-logo img { height: 36px; }
   max-width: 480px;
 }
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--text-light);
-  line-height: 1.75;
-  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  max-width: 520px;
 }
 .hero-ctas {
   display: flex;
@@ -1296,8 +1298,8 @@ a { -webkit-tap-highlight-color: transparent; }
 @media (min-width: 1200px) {
   .container { max-width: 1140px; }
   section { padding: var(--space-2xl) 0; }
-  .hero-home { gap: 2rem; }
-  .hero-illustration img { max-width: 480px; }
+  .hero-home { gap: 1rem; }
+  .hero-illustration img { max-width: 580px; }
   .hero-subtitle { font-size: 1.1rem; }
   .origin-block { gap: var(--space-2xl); }
   .origin-copy p { font-size: 1.05rem; }
@@ -1316,10 +1318,10 @@ a { -webkit-tap-highlight-color: transparent; }
 /* ── Ultra-wide ── */
 @media (min-width: 1440px) {
   .container { max-width: 1240px; }
-  .hero-illustration img { max-width: 520px; }
+  .hero-illustration img { max-width: 620px; }
   .experience-card { padding: 3rem 2.5rem; }
   .experience-card p { font-size: 1.1rem; }
-  .hero-home { padding-top: calc(var(--nav-height) + 3rem); }
+  .hero-home { padding-top: calc(var(--nav-height) + 2rem); }
   .origin-block { gap: var(--space-2xl); }
   .origin-photo { max-width: 500px; }
   .origin-copy { max-width: 500px; }
