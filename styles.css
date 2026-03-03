@@ -690,12 +690,12 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
   line-height: 1.8;
   color: var(--text-light);
 }
-.visit-info a {
+.visit-info a:not(.btn) {
   color: var(--terracotta);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
 }
-.visit-info a:hover { border-bottom-color: var(--terracotta); }
+.visit-info a:not(.btn):hover { border-bottom-color: var(--terracotta); }
 .hours-table { width: 100%; }
 .hours-table td { padding: 0.35rem 0; font-size: 1.15rem; color: var(--text-light); }
 .hours-table td:first-child { font-weight: 500; color: var(--text); padding-right: 2rem; }
