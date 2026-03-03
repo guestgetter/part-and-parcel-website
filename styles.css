@@ -124,22 +124,24 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 
 .brush-underline {
   position: relative;
-  display: inline-block;
+  display: inline;
   --brush-scale: 0;
 }
 .brush-underline::after {
   content: '';
   position: absolute;
   bottom: 2px;
-  left: -3%;
-  width: 106%;
-  height: 10px;
+  left: -4px;
+  right: -4px;
+  width: auto;
+  height: 8px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10'%3E%3Cpath d='M0,5 C5,3 15,8 30,5 C45,2 55,8 70,5 C85,2 100,7 115,5 C130,3 145,8 160,5 C175,2 190,7 200,5' stroke='%23BD5C5D' stroke-width='3' fill='none' stroke-linecap='round' opacity='0.4'/%3E%3C/svg%3E");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   transform: scaleX(var(--brush-scale, 0));
   transform-origin: left;
   transition: transform 0.01s;
+  pointer-events: none;
 }
 
 /* ── Watercolor Effects ── */
