@@ -408,7 +408,7 @@ nav.scrolled .nav-logo img { height: 36px; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(43,58,92,0.3), rgba(43,58,92,0.1) 60%, var(--paper) 100%);
+  background: linear-gradient(to bottom, rgba(43,58,92,0.7), rgba(43,58,92,0.5) 60%, var(--paper) 100%);
   z-index: 1;
 }
 .hero-immersive .hero-interior {
@@ -416,9 +416,16 @@ nav.scrolled .nav-logo img { height: 36px; }
   z-index: 2;
   padding: 0 2rem;
 }
-.hero-immersive h1 { color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-.hero-immersive .handwritten { color: var(--gold-light); }
-.hero-immersive p { color: rgba(255,255,255,0.9); }
+.hero-immersive h1 { color: #fff; text-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+.hero-immersive .handwritten { color: var(--gold-light); text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+.hero-immersive p {
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  font-weight: 500;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ── Sections ── */
 section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
