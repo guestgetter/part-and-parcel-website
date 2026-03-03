@@ -445,6 +445,9 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
 }
 .section-navy h2, .section-navy h3 { color: #fff; }
 .section-navy .section-label { color: var(--gold-light); }
+.section-navy .wc-card { background: rgba(255,255,255,0.92); }
+.section-navy .wc-card::after { background: none; }
+.section-navy .wc-card:hover { background: #fff; }
 
 /* ── Watercolor Card Border (shared) ── */
 .wc-card {
