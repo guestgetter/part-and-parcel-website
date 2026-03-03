@@ -31,6 +31,7 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-to-content">Skip to content</a>
   <div class="page-wash" aria-hidden="true"></div>
   <div aria-hidden="true">
     <div class="wc-spot wc-spot-1"></div>
@@ -38,12 +39,15 @@
     <div class="wc-spot wc-spot-3"></div>
   </div>
 
-  <div class="mobile-menu" role="dialog" aria-label="Navigation">
+  <div class="mobile-menu" role="dialog" aria-label="Navigation" aria-modal="true">
     <a href="index.html">Home</a>
     <a href="menus.html">Menus</a>
-    <a href="about.html">Our Story</a>
+    <a href="about.html" class="active" aria-current="page">Our Story</a>
     <a href="visit.html">Visit</a>
-    <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Reservations</a>
+    <a href="visit.html#private-events">Private Events</a>
+    <a href="https://app.squareup.com/gift/F8BZVSX8VPB13/order" target="_blank" rel="noopener">Gift Cards</a>
+    <a href="https://order.online/store/2210796?pickup=true&redirected=true" target="_blank" rel="noopener">Order Online</a>
+    <a href="https://www.opentable.ca/r/part-and-parcel-victoria#reserve" target="_blank" rel="noopener">Reservations</a>
   </div>
 
   <nav aria-label="Main navigation">
@@ -52,7 +56,10 @@
       <a href="menus.html">Menus</a>
       <a href="about.html" class="active">Our Story</a>
       <a href="visit.html">Visit</a>
-      <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="nav-cta">Reserve</a>
+      <a href="visit.html#private-events">Private Events</a>
+      <a href="https://app.squareup.com/gift/F8BZVSX8VPB13/order" target="_blank" rel="noopener">Gift Cards</a>
+      <a href="https://order.online/store/2210796?pickup=true&redirected=true" target="_blank" rel="noopener">Order Online</a>
+      <a href="https://www.opentable.ca/r/part-and-parcel-victoria#reserve" target="_blank" rel="noopener" class="nav-cta">Reserve</a>
     </div>
     <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -65,7 +72,7 @@
     <p class="hero-anim">Over a decade of cooking for Quadra Village.</p>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Story -->
     <section aria-label="Our story">
       <div class="container">
@@ -78,9 +85,11 @@
             <p class="reveal">From our very first service to today, our goal has stayed the same: to be the kind of place where you feel at home the moment you walk through the door.</p>
           </div>
           <div class="story-image reveal-scale">
-            <img src="part-and-parcel-front-illustration.png"
-                 alt="Watercolor illustration of Part and Parcel storefront with warm light and navy awning"
-                 loading="lazy" width="800" height="1040">
+            <picture>
+              <img src="part-and-parcel-hero-exterior.png"
+                   alt="Watercolor illustration of Part and Parcel storefront with warm light and navy awning"
+                   loading="lazy" width="800" height="1040">
+            </picture>
           </div>
         </div>
       </div>
@@ -104,8 +113,8 @@
       <div class="container">
         <div class="story-grid">
           <div class="feast-image reveal-scale">
-            <img src="part-and-parcel-bar-illustration.png"
-                 alt="Watercolor illustration of the Part and Parcel bar with wooden countertop and metal stools"
+            <img src="illustrations/part-and-parcel-bar.png"
+                 alt="Watercolor illustration of the Part and Parcel bar with wooden countertop, metal stools, and espresso machine"
                  loading="lazy" width="800" height="800">
           </div>
           <div class="story-text">
@@ -123,11 +132,11 @@
     <section class="section-navy" aria-label="Our neighbourhood">
       <div class="container" style="text-align:center; max-width:700px;">
         <span class="section-label reveal" style="color:var(--gold-light);">Our neighbourhood</span>
-        <h2 class="reveal" style="color:#fff; margin-bottom:1rem;">Quadra Village</h2>
-        <p class="reveal" style="opacity:0.8; font-size:1.05rem; margin-bottom:1.5rem;">
+        <h2 class="reveal" style="color:#fff; margin-bottom:1.5rem;">Quadra Village</h2>
+        <p class="reveal" style="opacity:0.85; font-size:1.05rem; line-height:1.8;">
           Quadra Village is one of Victoria's most charming pockets — a mix of independent shops, creative studios, and community gathering spots. We're proud to be part of this neighbourhood and to cook for the people who make it what it is.
         </p>
-        <p class="reveal" style="opacity:0.8;">
+        <p class="reveal" style="opacity:0.85; font-size:1.05rem; line-height:1.8; margin-top:1.25rem;">
           Whether you live around the corner or you're visiting Victoria for the first time, we hope Part &amp; Parcel feels like your spot. Pull up a chair. You're welcome here.
         </p>
         <a href="visit.html" class="btn btn-outline-light reveal" style="margin-top:2rem;">Come Visit Us</a>
@@ -149,6 +158,10 @@
     </section>
   </main>
 
+  <div class="footer-illustration" aria-hidden="true">
+    <img src="illustrations/part-and-parcel-footer-illustration.png" alt="Watercolor streetscape of Quadra Village" loading="lazy">
+  </div>
+
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -162,20 +175,20 @@
             <li><a href="menus.html">Menus</a></li>
             <li><a href="about.html">Our Story</a></li>
             <li><a href="visit.html">Visit</a></li>
-            <li><a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Reservations</a></li>
+            <li><a href="https://www.opentable.ca/r/part-and-parcel-victoria#reserve" target="_blank" rel="noopener">Reservations</a></li>
           </ul>
         </div>
         <div>
           <h4>More</h4>
           <ul class="footer-links">
-            <li><a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Order Online</a></li>
-            <li><a href="mailto:contact@partandparcel.ca?subject=Gift%20Card%20Inquiry">Gift Cards</a></li>
+            <li><a href="https://order.online/store/2210796?pickup=true&redirected=true" target="_blank" rel="noopener">Order Online</a></li>
+            <li><a href="https://app.squareup.com/gift/F8BZVSX8VPB13/order" target="_blank" rel="noopener">Gift Cards</a></li>
             <li><a href="mailto:contact@partandparcel.ca?subject=Private%20Event%20Inquiry">Private Events</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Part &amp; Parcel. All rights reserved.</span>
+        <span>&copy; 2026 Part &amp; Parcel. All rights reserved.</span>
         <div class="footer-social">
           <a href="https://www.instagram.com/partandparcelyyj/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -212,6 +225,16 @@
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
     }));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
+    });
 
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });
