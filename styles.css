@@ -980,8 +980,10 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
   .origin-timeline { display: none; }
   .origin-block,
   .origin-block--philosophy { grid-template-columns: 1fr; text-align: center; gap: var(--space-md); }
-  .origin-block--philosophy .origin-copy { order: 0; }
-  .origin-block--philosophy .origin-visual { order: -1; }
+  .origin-block .origin-copy { order: -1; }
+  .origin-block .origin-visual { order: 0; }
+  .origin-block--philosophy .origin-copy { order: -1; }
+  .origin-block--philosophy .origin-visual { order: 0; }
   .origin-visual { display: flex; justify-content: center; }
   .origin-photo { max-width: 100%; margin: 0 auto; }
   .origin-illustration { max-width: 300px; margin: 0 auto; }
