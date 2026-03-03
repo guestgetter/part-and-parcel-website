@@ -31,6 +31,7 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-to-content">Skip to content</a>
   <div class="page-wash" aria-hidden="true"></div>
   <div aria-hidden="true">
     <div class="wc-spot wc-spot-1"></div>
@@ -38,10 +39,10 @@
     <div class="wc-spot wc-spot-3"></div>
   </div>
 
-  <div class="mobile-menu" role="dialog" aria-label="Navigation">
+  <div class="mobile-menu" role="dialog" aria-label="Navigation" aria-modal="true">
     <a href="index.html">Home</a>
     <a href="menus.html">Menus</a>
-    <a href="about.html">Our Story</a>
+    <a href="about.html" class="active" aria-current="page">Our Story</a>
     <a href="visit.html">Visit</a>
     <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Reservations</a>
   </div>
@@ -65,7 +66,7 @@
     <p class="hero-anim">Over a decade of cooking for Quadra Village.</p>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Story -->
     <section aria-label="Our story">
       <div class="container">
@@ -78,9 +79,12 @@
             <p class="reveal">From our very first service to today, our goal has stayed the same: to be the kind of place where you feel at home the moment you walk through the door.</p>
           </div>
           <div class="story-image reveal-scale">
-            <img src="part-and-parcel-front-illustration.png"
-                 alt="Watercolor illustration of Part and Parcel storefront with warm light and navy awning"
-                 loading="lazy" width="800" height="1040">
+            <picture>
+              <source srcset="part-and-parcel-front-illustration-960.webp 960w, part-and-parcel-front-illustration-1600.webp 1600w" sizes="(max-width: 900px) 90vw, 480px" type="image/webp">
+              <img src="part-and-parcel-front-illustration.png"
+                   alt="Watercolor illustration of Part and Parcel storefront with warm light and navy awning"
+                   loading="lazy" width="800" height="1040">
+            </picture>
           </div>
         </div>
       </div>
@@ -104,9 +108,12 @@
       <div class="container">
         <div class="story-grid">
           <div class="feast-image reveal-scale">
-            <img src="part-and-parcel-bar-illustration.png"
-                 alt="Watercolor illustration of the Part and Parcel bar with wooden countertop and metal stools"
-                 loading="lazy" width="800" height="800">
+            <picture>
+              <source srcset="part-and-parcel-bar-illustration-960.webp 960w, part-and-parcel-bar-illustration-1600.webp 1600w" sizes="(max-width: 900px) 90vw, 500px" type="image/webp">
+              <img src="part-and-parcel-bar-illustration.png"
+                   alt="Watercolor illustration of the Part and Parcel bar with wooden countertop and metal stools"
+                   loading="lazy" width="800" height="800">
+            </picture>
           </div>
           <div class="story-text">
             <span class="section-label reveal">What drives us</span>
@@ -212,6 +219,16 @@
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
     }));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
+    });
 
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });

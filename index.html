@@ -100,6 +100,8 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-to-content">Skip to content</a>
+
   <!-- Page Transition Wash -->
   <div class="page-wash" aria-hidden="true"></div>
 
@@ -111,8 +113,8 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" role="dialog" aria-label="Navigation">
-    <a href="index.html">Home</a>
+  <div class="mobile-menu" role="dialog" aria-label="Navigation" aria-modal="true">
+    <a href="index.html" class="active" aria-current="page">Home</a>
     <a href="menus.html">Menus</a>
     <a href="about.html">Our Story</a>
     <a href="visit.html">Visit</a>
@@ -140,9 +142,12 @@
       <h1>Part &amp; Parcel</h1>
     </div>
     <div class="hero-illustration hero-anim">
-      <img src="part-and-parcel-front-illustration.png"
-           alt="Watercolor illustration of Part and Parcel restaurant storefront in Quadra Village, Victoria BC, with warm golden light glowing through the windows"
-           width="800" height="1040">
+      <picture>
+        <source srcset="part-and-parcel-front-illustration-960.webp 960w, part-and-parcel-front-illustration-1600.webp 1600w" sizes="(max-width: 380px) 220px, (max-width: 600px) 260px, (max-width: 900px) 300px, (max-width: 1200px) 420px, 520px" type="image/webp">
+        <img src="part-and-parcel-front-illustration.png"
+             alt="Watercolor illustration of Part and Parcel restaurant storefront in Quadra Village, Victoria BC, with warm golden light glowing through the windows"
+             width="800" height="1040">
+      </picture>
     </div>
     <div class="hero-foot hero-anim">
       <p class="hero-subtitle">Seasonal small plates, creative cocktails &amp; low intervention wines in the heart of Quadra Village, Victoria&nbsp;BC.</p>
@@ -153,12 +158,15 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Origin Story -->
     <section class="section-warm" aria-label="Our Story">
       <div class="container story-row">
         <div class="story-img reveal-scale">
-          <img src="part-and-parcel-front-illustration.png" alt="Watercolor illustration of the original storefront" loading="lazy">
+          <picture>
+            <source srcset="part-and-parcel-front-illustration-960.webp 960w, part-and-parcel-front-illustration-1600.webp 1600w" sizes="(max-width: 900px) 320px, 440px" type="image/webp">
+            <img src="part-and-parcel-front-illustration.png" alt="Watercolor illustration of the original storefront" loading="lazy">
+          </picture>
         </div>
         <div class="story-copy">
           <span class="section-label reveal">Since 2013</span>
@@ -168,7 +176,10 @@
       </div>
       <div class="container story-row story-row--flip">
         <div class="story-img reveal-scale">
-          <img src="part-and-parcel-bar-illustration.png" alt="Illustration of our cozy bar and dining room" loading="lazy">
+          <picture>
+            <source srcset="part-and-parcel-bar-illustration-960.webp 960w, part-and-parcel-bar-illustration-1600.webp 1600w" sizes="(max-width: 900px) 320px, 440px" type="image/webp">
+            <img src="part-and-parcel-bar-illustration.png" alt="Illustration of our cozy bar and dining room" loading="lazy">
+          </picture>
         </div>
         <div class="story-copy">
           <span class="section-label reveal">Our Philosophy</span>
@@ -329,6 +340,16 @@
         mobileMenu.classList.remove('open');
         document.body.style.overflow = '';
       });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
     });
 
     /* Nav scroll */

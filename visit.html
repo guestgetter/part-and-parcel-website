@@ -35,6 +35,7 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-to-content">Skip to content</a>
   <div class="page-wash" aria-hidden="true"></div>
   <div aria-hidden="true">
     <div class="wc-spot wc-spot-1"></div>
@@ -42,11 +43,11 @@
     <div class="wc-spot wc-spot-3"></div>
   </div>
 
-  <div class="mobile-menu" role="dialog" aria-label="Navigation">
+  <div class="mobile-menu" role="dialog" aria-label="Navigation" aria-modal="true">
     <a href="index.html">Home</a>
     <a href="menus.html">Menus</a>
     <a href="about.html">Our Story</a>
-    <a href="visit.html">Visit</a>
+    <a href="visit.html" class="active" aria-current="page">Visit</a>
     <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Reservations</a>
   </div>
 
@@ -69,7 +70,7 @@
     <p class="hero-anim">Quadra Village, Victoria BC. Walk-ins always welcome at the bar.</p>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Visit Details -->
     <section aria-label="Location and hours">
       <div class="container">
@@ -117,10 +118,13 @@
     <section class="section-warm" style="text-align:center;" aria-label="Restaurant illustration">
       <div class="container" style="max-width:600px;">
         <div class="reveal-scale">
+          <picture>
+          <source srcset="part-and-parcel-front-illustration-960.webp 960w, part-and-parcel-front-illustration-1600.webp 1600w" sizes="(max-width: 600px) 280px, 420px" type="image/webp">
           <img src="part-and-parcel-front-illustration.png"
                alt="Watercolor illustration of Part and Parcel storefront in Quadra Village"
                loading="lazy" width="800" height="1040"
                style="max-width:420px; margin:0 auto; filter:drop-shadow(0 6px 20px rgba(0,0,0,0.06));">
+        </picture>
         </div>
         <p class="reveal" style="margin-top:2rem; font-family:var(--font-handwritten); font-size:1.3rem; color:var(--terracotta);">We saved you a seat.</p>
       </div>
@@ -214,6 +218,16 @@
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
     }));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
+    });
 
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });

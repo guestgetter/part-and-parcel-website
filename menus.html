@@ -47,6 +47,7 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-to-content">Skip to content</a>
   <div class="page-wash" aria-hidden="true"></div>
   <div aria-hidden="true">
     <div class="wc-spot wc-spot-1"></div>
@@ -54,9 +55,9 @@
     <div class="wc-spot wc-spot-3"></div>
   </div>
 
-  <div class="mobile-menu" role="dialog" aria-label="Navigation">
+  <div class="mobile-menu" role="dialog" aria-label="Navigation" aria-modal="true">
     <a href="index.html">Home</a>
-    <a href="menus.html">Menus</a>
+    <a href="menus.html" class="active" aria-current="page">Menus</a>
     <a href="about.html">Our Story</a>
     <a href="visit.html">Visit</a>
     <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener">Reservations</a>
@@ -82,18 +83,18 @@
     <p class="hero-anim">Seasonal, local, and meant to be shared. We recommend 3–4 plates per person.</p>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Menu Tabs -->
     <section aria-label="Menus">
       <div class="container">
-        <div class="menu-tabs reveal" role="tablist">
-          <button class="menu-tab active" role="tab" aria-selected="true" data-tab="lunch">Lunch</button>
-          <button class="menu-tab" role="tab" aria-selected="false" data-tab="happyhour">Happy Hour</button>
-          <button class="menu-tab" role="tab" aria-selected="false" data-tab="dinner">Dinner</button>
+        <div class="menu-tabs reveal" role="tablist" aria-label="Menu sections">
+          <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="lunch" id="tab-lunch" data-tab="lunch" tabindex="0">Lunch</button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="happyhour" id="tab-happyhour" data-tab="happyhour" tabindex="-1">Happy Hour</button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="dinner" id="tab-dinner" data-tab="dinner" tabindex="-1">Dinner</button>
         </div>
 
         <!-- Lunch -->
-        <div class="menu-panel active" id="lunch" role="tabpanel">
+        <div class="menu-panel active" id="lunch" role="tabpanel" aria-labelledby="tab-lunch">
           <div class="menu-category">
             <h3 class="menu-category-name">To Start</h3>
             <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Market Greens</span><p class="menu-item-desc">Sherry vinaigrette, shaved pecorino, toasted seeds</p></div><span class="menu-item-price">$16</span></div>
@@ -110,7 +111,7 @@
         </div>
 
         <!-- Happy Hour -->
-        <div class="menu-panel" id="happyhour" role="tabpanel">
+        <div class="menu-panel" id="happyhour" role="tabpanel" aria-labelledby="tab-happyhour">
           <div class="menu-category">
             <h3 class="menu-category-name">Bites</h3>
             <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House Fries</span><p class="menu-item-desc">Truffle aioli, fresh herbs, sea salt</p></div><span class="menu-item-price">$9</span></div>
@@ -127,7 +128,7 @@
         </div>
 
         <!-- Dinner -->
-        <div class="menu-panel" id="dinner" role="tabpanel">
+        <div class="menu-panel" id="dinner" role="tabpanel" aria-labelledby="tab-dinner">
           <div class="menu-category">
             <h3 class="menu-category-name">Small Plates</h3>
             <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hamachi Crudo</span><p class="menu-item-desc">Yuzu, black sesame, microgreens, chili crisp</p></div><span class="menu-item-price">$21</span></div>
@@ -151,9 +152,12 @@
       <div class="container">
         <div class="feast-grid">
           <div class="feast-image reveal-scale">
-            <img src="part-and-parcel-bar-illustration.png"
-                 alt="Watercolor illustration of the Part and Parcel bar interior"
-                 loading="lazy" width="800" height="800">
+            <picture>
+              <source srcset="part-and-parcel-bar-illustration-960.webp 960w, part-and-parcel-bar-illustration-1600.webp 1600w" sizes="(max-width: 900px) 90vw, 500px" type="image/webp">
+              <img src="part-and-parcel-bar-illustration.png"
+                   alt="Watercolor illustration of the Part and Parcel bar interior"
+                   loading="lazy" width="800" height="800">
+            </picture>
           </div>
           <div>
             <span class="section-label reveal">Let us take the wheel</span>
@@ -247,6 +251,16 @@
       hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = '';
     }));
 
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
+    });
+
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });
     nav.classList.toggle('scrolled', window.scrollY > 50);
@@ -254,21 +268,33 @@
     /* Menu tabs */
     const tabs = document.querySelectorAll('.menu-tab');
     const panels = document.querySelectorAll('.menu-panel');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-        panels.forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-        document.getElementById(tab.dataset.tab).classList.add('active');
-      });
+    function activateTab(tab) {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); t.setAttribute('tabindex', '-1'); });
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      tab.setAttribute('tabindex', '0');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    }
+    tabs.forEach(tab => tab.addEventListener('click', () => activateTab(tab)));
+
+    const tabList = document.querySelector('[role="tablist"]');
+    tabList.addEventListener('keydown', (e) => {
+      const tabArray = Array.from(tabs);
+      const idx = tabArray.indexOf(document.activeElement);
+      let next;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); next = (idx + 1) % tabArray.length; }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); next = (idx - 1 + tabArray.length) % tabArray.length; }
+      else if (e.key === 'Home') { e.preventDefault(); next = 0; }
+      else if (e.key === 'End') { e.preventDefault(); next = tabArray.length - 1; }
+      if (next !== undefined) { tabArray[next].focus(); activateTab(tabArray[next]); }
     });
 
     /* Activate tab from hash */
     const hash = window.location.hash.replace('#', '');
     if (hash) {
       const targetTab = document.querySelector(`[data-tab="${hash}"]`);
-      if (targetTab) targetTab.click();
+      if (targetTab) activateTab(targetTab);
     }
 
     if (reducedMotion) {
