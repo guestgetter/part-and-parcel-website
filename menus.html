@@ -88,61 +88,110 @@
     <section aria-label="Menus">
       <div class="container">
         <div class="menu-tabs reveal" role="tablist" aria-label="Menu sections">
-          <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="lunch" id="tab-lunch" data-tab="lunch" tabindex="0">Lunch</button>
+          <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="dinner" id="tab-dinner" data-tab="dinner" tabindex="0">Dinner</button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="lunch" id="tab-lunch" data-tab="lunch" tabindex="-1">Lunch</button>
           <button class="menu-tab" role="tab" aria-selected="false" aria-controls="happyhour" id="tab-happyhour" data-tab="happyhour" tabindex="-1">Happy Hour</button>
-          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="dinner" id="tab-dinner" data-tab="dinner" tabindex="-1">Dinner</button>
+        </div>
+
+        <!-- Dinner -->
+        <div class="menu-panel active" id="dinner" role="tabpanel" aria-labelledby="tab-dinner">
+          <div class="menu-section-intro">
+            <h3 class="menu-category-name" style="border:none; text-align:center;">Feast With Us</h3>
+            <div class="feast-price">$74 <span>per person</span></div>
+            <p>A journey through 8 of our favourite dishes, served for sharing, with a surprise or two. Includes dessert, does not include sandwiches. Whole table participation is required.</p>
+            <p style="margin-top:0.5rem;"><em>Optional drink pairing add $49</em></p>
+          </div>
+          <div class="menu-category">
+            <h3 class="menu-category-name">Small Plates</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Shishito Peppers</span><p class="menu-item-desc">Lime, flaky salt</p></div><span class="menu-item-price">$12</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Charred Beets</span><p class="menu-item-desc">Whipped tofu, zhug, pumpkin seed, pomegranate molasses</p></div><span class="menu-item-price">$16</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Burrata</span><p class="menu-item-desc">Pine mushroom bagna cauda, chanterelle &amp; apple vierge, sourdough</p></div><span class="menu-item-price">$28</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Broccoli</span><p class="menu-item-desc">Date purée, sesame, feta, mint</p></div><span class="menu-item-price">$16</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Farm Leaves</span><p class="menu-item-desc">Poppyseed dressing, fuji apple, onion</p></div><span class="menu-item-price">$19</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tuna Crudo</span><p class="menu-item-desc">Cara cara oranges, elderflower nuoc cham, tapioca, curry leaf</p></div><span class="menu-item-price">$22</span></div>
+          </div>
+          <div class="menu-category">
+            <h3 class="menu-category-name">Large Plates</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Potato Gnocchi</span><p class="menu-item-desc">Squash butter, sage chimichurri, ricotta, leeks</p></div><span class="menu-item-price">$28</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kamut Fried Chicken</span><p class="menu-item-desc">Buffalo hot sauce, devil's club ranch, crudités</p></div><span class="menu-item-price">$19</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pork Belly</span><p class="menu-item-desc">Curried raisin vinaigrette, crispy crackling, brussel sprouts</p></div><span class="menu-item-price">$32</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Steelhead Trout</span><p class="menu-item-desc">Carrot purée, black tea tare, gomaae, pickled shiitake</p></div><span class="menu-item-price">$38</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ribeye</span><p class="menu-item-desc">Herbed foie gras butter, fried celeriac</p></div><span class="menu-item-price">$54</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kamut Fried Chicken Sandwich</span><p class="menu-item-desc">Slaw, cilantro, chili garlic mayo</p></div><span class="menu-item-price">$18</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Charred Broccoli Sandwich</span><p class="menu-item-desc">Date, mint, feta, sesame, mayo</p></div><span class="menu-item-price">$17</span></div>
+          </div>
+          <div class="menu-category">
+            <h3 class="menu-category-name">Sweet Treats</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Basque Cheesecake</span><p class="menu-item-desc">Seasonal accompaniments</p></div><span class="menu-item-price">$14</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Dark Chocolate Brownie</span><p class="menu-item-desc">Burnt hazelnut caramel, pistachio ice cream</p></div><span class="menu-item-price">$14</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Warm Dates</span><p class="menu-item-desc">Vanilla bean oil, maldon salt</p></div><span class="menu-item-price">$9</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Black Sesame Kamut Cookie</span><p class="menu-item-desc">Caramelized white chocolate, brown butter</p></div><span class="menu-item-price">$5</span></div>
+          </div>
+          <p class="menu-note">Not all ingredients are listed — please advise us of any allergies or sensitivities. All plates are designed to be shared.</p>
         </div>
 
         <!-- Lunch -->
-        <div class="menu-panel active" id="lunch" role="tabpanel" aria-labelledby="tab-lunch">
+        <div class="menu-panel" id="lunch" role="tabpanel" aria-labelledby="tab-lunch">
           <div class="menu-category">
-            <h3 class="menu-category-name">To Start</h3>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Market Greens</span><p class="menu-item-desc">Sherry vinaigrette, shaved pecorino, toasted seeds</p></div><span class="menu-item-price">$16</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasonal Soup</span><p class="menu-item-desc">Changes daily, served with house bread</p></div><span class="menu-item-price">$14</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Burrata</span><p class="menu-item-desc">Grilled bread, chili oil, sea salt, local greens</p></div><span class="menu-item-price">$18</span></div>
+            <h3 class="menu-category-name">Sandwiches</h3>
+            <p class="menu-category-note">Add fries or greens +$6 · Add cup of soup +$7 | bowl $14 · Add peruvian fries +$8</p>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">P&amp;P Smashburger</span><p class="menu-item-desc">Beef smashpatty, aged white cheddar, shredduce, onion, pickles, brioche bun, habanada burger sauce</p><p class="menu-item-modifier">Single $18 / Double $23 · Bacon +$3</p></div><span class="menu-item-price">$18</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kamut Fried Chicken</span><p class="menu-item-desc">Slaw, cilantro, chili garlic mayo, ciabatta</p><p class="menu-item-modifier">Add buffalo hot sauce +$2</p></div><span class="menu-item-price">$18</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Charred Broccoli</span><p class="menu-item-desc">Date, mint, feta, pickled onion, mayo, ciabatta</p></div><span class="menu-item-price">$17</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fancy Grilled Cheese</span><p class="menu-item-desc">Cheddar, daily goods, fol epi sourdough</p></div><span class="menu-item-price">$17</span></div>
           </div>
           <div class="menu-category">
-            <h3 class="menu-category-name">Mains</h3>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Smoked Salmon Toast</span><p class="menu-item-desc">Crème fraîche, capers, dill, pickled onion</p></div><span class="menu-item-price">$19</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House-Made Pasta</span><p class="menu-item-desc">Seasonal ragù, parmesan, fresh herbs</p></div><span class="menu-item-price">$22</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Local Halibut</span><p class="menu-item-desc">Brown butter, capers, new potatoes, seasonal veg</p></div><span class="menu-item-price">$26</span></div>
+            <h3 class="menu-category-name">Rice + Pickle Bowl</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House Pickles, Peanuts, Scallions, Miso Sauce</span><p class="menu-item-desc">Add your choice of: fried chicken $9 · yuzu grilled chicken $9 · pork belly $12 · grilled broccoli $7 · tea egg $3 · fried egg $3 · chili oil $2</p></div><span class="menu-item-price">$14</span></div>
           </div>
-          <p class="menu-note">Menu changes with the seasons. Ask your server about today's specials.</p>
+          <div class="menu-category">
+            <h3 class="menu-category-name">Lunch Plates</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Burrata</span><p class="menu-item-desc">Pine mushroom bagna cauda, chanterelle &amp; apple vierge, sourdough</p></div><span class="menu-item-price">$26</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Farm Leaves</span><p class="menu-item-desc">Poppyseed dressing, fuji apple, onion</p></div><span class="menu-item-price">$19</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tuna Crudo</span><p class="menu-item-desc">Cara cara oranges, elderflower nuoc cham, curry leaf, tapioca crisp</p></div><span class="menu-item-price">$20</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Potato Gnocchi</span><p class="menu-item-desc">Squash butter, sage chimichurri, ricotta, leeks</p></div><span class="menu-item-price">$28</span></div>
+          </div>
+          <div class="menu-category">
+            <h3 class="menu-category-name">Add to Anything</h3>
+            <div class="menu-addons">
+              <div class="menu-addon-item">Side Greens <span>$6</span></div>
+              <div class="menu-addon-item">Fries <span>$6</span></div>
+              <div class="menu-addon-item">Peruvian Spiced Fries <span>$8</span></div>
+              <div class="menu-addon-item">Cup of Soup <span>$7</span></div>
+              <div class="menu-addon-item">Fried Kamut Chicken <span>$9</span></div>
+              <div class="menu-addon-item">Yuzu Grilled Chicken <span>$9</span></div>
+              <div class="menu-addon-item">Pork Belly <span>$12</span></div>
+              <div class="menu-addon-item">Grilled Broccoli <span>$7</span></div>
+              <div class="menu-addon-item">Fried Egg <span>$3</span></div>
+              <div class="menu-addon-item">Tea Brined Egg <span>$3</span></div>
+              <div class="menu-addon-item">Chili Oil <span>$2</span></div>
+            </div>
+          </div>
+          <p class="menu-note">Not all ingredients are listed — please advise us of any allergies or sensitivities. All plates are designed to be shared.</p>
         </div>
 
         <!-- Happy Hour -->
         <div class="menu-panel" id="happyhour" role="tabpanel" aria-labelledby="tab-happyhour">
+          <div class="menu-section-intro">
+            <p style="font-family:var(--font-handwritten); font-size:1.15rem; color:var(--terracotta); margin-bottom:0.5rem;">Day Time 2:30–4:30pm · Late Night 9–10pm</p>
+            <p>$10 cocktails + wine, $5 beer, $5 off our fried chicken and broccoli sandwiches, and our one of a kind smashburger.</p>
+          </div>
           <div class="menu-category">
-            <h3 class="menu-category-name">Bites</h3>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House Fries</span><p class="menu-item-desc">Truffle aioli, fresh herbs, sea salt</p></div><span class="menu-item-price">$9</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Oysters</span><p class="menu-item-desc">Half dozen, classic mignonette</p></div><span class="menu-item-price">$18</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Charcuterie Board</span><p class="menu-item-desc">House selections, pickles, mustard, grilled bread</p></div><span class="menu-item-price">$22</span></div>
+            <h3 class="menu-category-name">Food</h3>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fried Chicken Sandwich</span><p class="menu-item-desc">Slaw, cilantro, chili mayo</p></div><span class="menu-item-price">$13</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Charred Broccoli Sandwich</span><p class="menu-item-desc">Date, mint, feta, sesame, mayo</p></div><span class="menu-item-price">$12</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">P&amp;P Smashburger</span><p class="menu-item-desc">Cheddar, shredduce, habanada</p><p class="menu-item-modifier">Make it a double +$5 · Bacon +$3</p></div><span class="menu-item-price">$13</span></div>
           </div>
           <div class="menu-category">
             <h3 class="menu-category-name">Drinks</h3>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Draft Beer</span><p class="menu-item-desc">Rotating local selections</p></div><span class="menu-item-price">$7</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House Wine</span><p class="menu-item-desc">Red or white, low intervention</p></div><span class="menu-item-price">$9</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cocktail of the Day</span><p class="menu-item-desc">Ask your bartender</p></div><span class="menu-item-price">$12</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mezcal Punch</span><p class="menu-item-desc">Tequila, maraschino, hibiscus</p></div><span class="menu-item-price">$10</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Akvavit Negroni</span><p class="menu-item-desc">Akvavit, vermouth, campari</p></div><span class="menu-item-price">$10</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Golden Hour N/A</span><p class="menu-item-desc">Lumette, citrus, lemongrass</p></div><span class="menu-item-price">$10</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">House Wine</span><p class="menu-item-desc">Sparkling, white, red</p></div><span class="menu-item-price">$10</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hoyne Pilsner</span></div><span class="menu-item-price">$5</span></div>
+            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hoyne Dark Matter</span></div><span class="menu-item-price">$5</span></div>
           </div>
           <p class="menu-note">Happy Hour: Tues – Sat, 2:30–4:30pm &amp; 9–10pm</p>
-        </div>
-
-        <!-- Dinner -->
-        <div class="menu-panel" id="dinner" role="tabpanel" aria-labelledby="tab-dinner">
-          <div class="menu-category">
-            <h3 class="menu-category-name">Small Plates</h3>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hamachi Crudo</span><p class="menu-item-desc">Yuzu, black sesame, microgreens, chili crisp</p></div><span class="menu-item-price">$21</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Duck Confit Crostini</span><p class="menu-item-desc">Cherry compote, arugula, aged balsamic</p></div><span class="menu-item-price">$19</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Roasted Beet Salad</span><p class="menu-item-desc">Whipped goat cheese, walnut, local honey</p></div><span class="menu-item-price">$17</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Wild Mushroom Risotto</span><p class="menu-item-desc">Truffle oil, parmesan, fresh herbs</p></div><span class="menu-item-price">$24</span></div>
-          </div>
-          <div class="menu-category">
-            <h3 class="menu-category-name">Larger Plates</h3>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seared Scallops</span><p class="menu-item-desc">Cauliflower purée, brown butter, capers</p></div><span class="menu-item-price">$28</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Braised Lamb Shoulder</span><p class="menu-item-desc">Soft polenta, gremolata, seasonal vegetables</p></div><span class="menu-item-price">$32</span></div>
-            <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pan-Seared Halibut</span><p class="menu-item-desc">Beurre blanc, Island vegetables, fresh herbs</p></div><span class="menu-item-price">$34</span></div>
-          </div>
-          <p class="menu-note">We recommend 3–4 plates per person. Menu changes with the seasons.</p>
         </div>
       </div>
     </section>
@@ -162,13 +211,12 @@
           <div>
             <span class="section-label reveal">Let us take the wheel</span>
             <h2 class="reveal"><span class="brush-underline">Feast With Us</span></h2>
-            <div class="feast-price reveal">$74 <span>per guest</span></div>
-            <p class="reveal" style="color:var(--text-light);">Our signature dining experience. Eight to ten of our favourite seasonal dishes, served family style. The best way to taste the full range of our kitchen.</p>
+            <div class="feast-price reveal">$74 <span>per person</span></div>
+            <p class="reveal" style="color:var(--text-light);">A journey through 8 of our favourite dishes, served for sharing, with a surprise or two. Includes dessert, does not include sandwiches.</p>
             <ul class="feast-details reveal">
-              <li>Eight to ten seasonal courses</li>
-              <li>Served family style, shared at the table</li>
-              <li>Entire table participation required</li>
-              <li>Wine pairing available</li>
+              <li>Eight seasonal courses, served family style</li>
+              <li>Whole table participation required</li>
+              <li>Optional drink pairing add $49</li>
             </ul>
             <a href="https://www.exploretock.com/partandparcel" target="_blank" rel="noopener" class="btn btn-primary reveal">Book the Feast</a>
           </div>
