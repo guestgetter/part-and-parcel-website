@@ -854,6 +854,22 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
   opacity: 0.18;
 }
 
+/* Origin intro — photo left, text right on desktop; stacked on mobile */
+.origin-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  padding: var(--space-md) 0;
+}
+.origin-intro__photo { }
+.origin-intro__text h2 { margin-bottom: 1rem; }
+.origin-intro__text p {
+  font-size: 1.02rem;
+  color: var(--text-light);
+  line-height: 1.85;
+}
+
 .origin-block {
   display: grid;
   grid-template-columns: 7fr 5fr;
@@ -862,17 +878,7 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
   padding: var(--space-md) 0;
 }
 
-/* Desktop: intro block = photo left (7fr), heading+copy right (5fr) */
-@media (min-width: 901px) {
-  .origin-block--intro {
-    grid-template-columns: 7fr 5fr;
-    text-align: left;
-  }
-  .origin-block--intro .origin-heading { grid-column: 2; grid-row: 1; }
-  .origin-block--intro .origin-visual { grid-column: 1; grid-row: 1 / -1; align-self: center; }
-  .origin-block--intro .origin-copy { grid-column: 2; grid-row: 2; }
-}
-
+.origin-intro + .origin-pullquote,
 .origin-block + .origin-pullquote { margin-top: var(--space-lg); }
 .origin-pullquote + .origin-block { margin-top: var(--space-lg); }
 
@@ -991,11 +997,12 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
 
   .origin { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
   .origin-timeline { display: none; }
+  .origin-intro { grid-template-columns: 1fr; text-align: center; gap: var(--space-md); }
+  .origin-intro__photo { display: flex; justify-content: center; }
+  .origin-intro__photo img { max-width: 100%; }
+  .origin-intro__text { max-width: 100%; }
   .origin-block,
   .origin-block--philosophy { grid-template-columns: 1fr; text-align: center; gap: var(--space-md); }
-  .origin-block--intro .origin-heading,
-  .origin-block--intro .origin-visual,
-  .origin-block--intro .origin-copy { grid-column: 1; grid-row: auto; }
   .origin-block--philosophy .origin-copy { order: -1; }
   .origin-block--philosophy .origin-visual { order: 0; }
   .origin-visual { display: flex; justify-content: center; }
