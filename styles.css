@@ -726,7 +726,6 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
   max-width: 500px;
   border-radius: 6px;
   filter: drop-shadow(0 8px 30px rgba(0,0,0,0.08));
-  mix-blend-mode: multiply;
 }
 
 /* ── Gallery ── */
