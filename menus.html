@@ -87,7 +87,7 @@
     <!-- Menu Tabs -->
     <section aria-label="Menus">
       <div class="container">
-        <div class="menu-tabs reveal" role="tablist" aria-label="Menu sections">
+        <div class="menu-tabs" role="tablist" aria-label="Menu sections">
           <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="dinner" id="tab-dinner" data-tab="dinner" tabindex="0">Dinner</button>
           <button class="menu-tab" role="tab" aria-selected="false" aria-controls="lunch" id="tab-lunch" data-tab="lunch" tabindex="-1">Lunch</button>
           <button class="menu-tab" role="tab" aria-selected="false" aria-controls="happyhour" id="tab-happyhour" data-tab="happyhour" tabindex="-1">Happy Hour</button>
@@ -363,10 +363,6 @@
       start: 'top 88%'
     });
 
-    gsap.from('.menu-item', {
-      y: 15, opacity: 0, duration: 0.5, stagger: 0.05,
-      scrollTrigger: { trigger: '.menu-panel.active', start: 'top 80%' }
-    });
   });
   </script>
 </body>

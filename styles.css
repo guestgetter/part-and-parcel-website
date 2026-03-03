@@ -511,11 +511,11 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
 .menu-category { margin-bottom: var(--space-lg); }
 .menu-category-name {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: var(--navy);
   margin-bottom: 1.25rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .menu-item {
   display: flex;
@@ -525,9 +525,9 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
 }
 .menu-item + .menu-item { border-top: 1px dotted rgba(0,0,0,0.06); }
 .menu-item-info { flex: 1; padding-right: 1.5rem; }
-.menu-item-name { font-weight: 500; color: var(--charcoal); }
-.menu-item-desc { font-size: 0.85rem; color: var(--warm-grey); margin-top: 0.15rem; }
-.menu-item-price { font-size: 0.95rem; color: var(--sage); font-weight: 500; white-space: nowrap; }
+.menu-item-name { font-family: var(--font-sans); font-weight: 500; font-size: 0.95rem; color: var(--charcoal); }
+.menu-item-desc { font-family: var(--font-sans); font-size: 0.88rem; color: var(--text-light); margin-top: 0.2rem; line-height: 1.5; }
+.menu-item-price { font-family: var(--font-sans); font-size: 0.95rem; color: var(--sage); font-weight: 500; white-space: nowrap; }
 .menu-note {
   text-align: center;
   margin-top: var(--space-md);
