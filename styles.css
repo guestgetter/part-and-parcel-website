@@ -115,7 +115,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 
 .section-label {
   font-family: var(--font-handwritten);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--terracotta);
   margin-bottom: 0.5rem;
   display: block;
@@ -223,7 +223,7 @@ nav.scrolled .nav-logo img { height: 36px; }
   position: relative;
   font-family: var(--font-sans);
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--text-light);
   transition: color 0.3s;
@@ -249,7 +249,7 @@ nav.scrolled .nav-logo img { height: 36px; }
   color: #fff !important;
   font-family: var(--font-sans) !important;
   font-size: 1.25rem !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   letter-spacing: 0.04em !important;
   padding: 0.55rem 1.4rem;
   border-radius: 3px;
@@ -334,7 +334,7 @@ nav.scrolled .nav-logo img { height: 36px; }
   gap: 1.5rem;
 }
 .hero-headline .handwritten {
-  font-size: 1.35rem;
+  font-size: 1.6rem;
   color: var(--terracotta);
   display: block;
   margin-bottom: 0.15rem;
@@ -378,7 +378,7 @@ nav.scrolled .nav-logo img { height: 36px; }
   position: relative;
   z-index: 1;
 }
-.hero-interior .handwritten { font-size: 1.3rem; color: var(--terracotta); }
+.hero-interior .handwritten { font-size: 1.6rem; color: var(--terracotta); }
 .hero-interior h1 { margin-top: 0.25rem; margin-bottom: 1rem; }
 .hero-interior p { max-width: 550px; margin: 0 auto; color: var(--text-light); }
 
@@ -408,7 +408,7 @@ nav.scrolled .nav-logo img { height: 36px; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(43,58,92,0.7), rgba(43,58,92,0.5) 60%, var(--paper) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.35) 60%, var(--paper) 100%);
   z-index: 1;
 }
 .hero-immersive .hero-interior {
@@ -461,7 +461,7 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
 .experience-card h3 { margin-bottom: 0.5rem; color: var(--navy); font-size: clamp(1.6rem, 2.5vw, 1.9rem); }
 .experience-card .card-hours {
   font-family: var(--font-handwritten);
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   color: var(--terracotta);
   margin-bottom: 0.75rem;
 }
@@ -577,7 +577,7 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
   text-align: center;
   margin-top: var(--space-md);
   font-family: var(--font-handwritten);
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   color: var(--warm-grey);
 }
 
@@ -904,7 +904,7 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
 }
 .testimonial-card cite {
   font-family: var(--font-handwritten);
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   font-style: normal;
   color: var(--terracotta);
 }
