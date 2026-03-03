@@ -23,6 +23,7 @@
   --warm-grey:    #9A8E82;
   --text:         #3A3A3A;
   --text-light:   #6B6259;
+  --cyan-border:  #7FA3A2;
 
   --font-serif:      'Cormorant Garamond', Georgia, serif;
   --font-handwritten: 'Caveat', cursive;
@@ -231,17 +232,15 @@ nav.scrolled .nav-logo img { height: 36px; }
   position: absolute;
   bottom: -4px;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 2.5px;
   background: var(--terracotta);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 4px;
 }
 .nav-links a:not(.nav-cta):hover::after,
 .nav-links a:not(.nav-cta).active::after {
-  transform: scaleX(1);
+  width: 100%;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--navy); }
 .nav-cta {
@@ -429,7 +428,7 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
 }
 .experience-card {
   background: rgba(255,255,255,0.7);
-  border: 2px solid var(--navy-light);
+  border: 2px solid var(--cyan-border);
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
   padding: 2.5rem 2rem;
   text-align: center;
@@ -803,7 +802,7 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
   position: relative;
   padding: 2rem;
   background: rgba(255,255,255,0.6);
-  border: 2px solid var(--navy-light);
+  border: 2px solid var(--cyan-border);
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.03);
   transition: transform 0.3s ease;
