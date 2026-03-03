@@ -774,7 +774,7 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: var(--space-md);
   display: flex; justify-content: space-between; align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .footer-social { display: flex; gap: 1rem; }
 .footer-social a { opacity: 0.6; transition: opacity 0.3s; }
@@ -822,7 +822,7 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
   .hero-ctas { flex-direction: column; align-items: center; }
   .hero-ctas .btn { width: 100%; max-width: 260px; text-align: center; }
   .menu-tabs { flex-wrap: wrap; }
-  .menu-tab { padding: 0.65rem 1rem; font-size: 0.7rem; }
+  .menu-tab { padding: 0.65rem 1rem; font-size: 0.85rem; }
   .newsletter-form { flex-direction: column; }
   .newsletter-form button { width: 100%; }
   .visit-map, .visit-map iframe { min-height: 280px; }
@@ -910,7 +910,7 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
 }
 .testimonial-source {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--warm-grey);
   letter-spacing: 0.03em;
 }
@@ -1067,23 +1067,23 @@ a { -webkit-tap-highlight-color: transparent; }
   h1 { font-size: 2.2rem; }
   .hero-home { gap: 0.75rem; }
   .hero-illustration img { max-width: 220px; }
-  .hero-subtitle { font-size: 0.92rem; }
-  .section-label { font-size: 1.05rem; }
-  .menu-tab { padding: 0.5rem 0.75rem; font-size: 0.65rem; }
-  .btn { padding: 0.7rem 1.5rem; font-size: 0.78rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .section-label { font-size: 1.2rem; }
+  .menu-tab { padding: 0.5rem 0.75rem; font-size: 0.8rem; }
+  .btn { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
   .mobile-menu a { font-size: 1.5rem; gap: 1.5rem; }
   .info-strip-item h3 { font-size: 1rem; }
-  .info-strip-item p { font-size: 0.88rem; }
+  .info-strip-item p { font-size: 1rem; }
   .newsletter-form input[type="email"] { font-size: 16px; }
   .hero-interior { padding: calc(var(--nav-height) + 2rem) 1rem 2rem; }
-  .hero-interior p { font-size: 0.92rem; }
+  .hero-interior p { font-size: 1rem; }
   .feast-price { font-size: 2rem; }
   .story-img img { max-width: 200px; }
-  .story-copy p { font-size: 0.92rem; }
+  .story-copy p { font-size: 1rem; }
   .philosophy-block blockquote { font-size: 1.2rem; }
   .visit-info h3 { font-size: 1.15rem; }
-  .hours-table td { font-size: 0.88rem; padding-right: 1rem; }
-  .footer-brand p { font-size: 0.82rem; }
+  .hours-table td { font-size: 1rem; padding-right: 1rem; }
+  .footer-brand p { font-size: 1rem; }
 }
 
 /* ── Large desktop ── */
@@ -1110,7 +1110,7 @@ a { -webkit-tap-highlight-color: transparent; }
   .container { max-width: 1240px; }
   .hero-illustration img { max-width: 520px; }
   .experience-card { padding: 3rem 2.5rem; }
-  .experience-card p { font-size: 0.95rem; }
+  .experience-card p { font-size: 1.1rem; }
   .hero-home { padding-top: calc(var(--nav-height) + 3rem); }
   .story-row { gap: var(--space-2xl); }
   .story-img img { max-width: 500px; }
