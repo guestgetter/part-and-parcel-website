@@ -725,6 +725,23 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
 .newsletter-form button:hover { background: var(--terracotta); transform: translateY(-1px); }
 
 /* ── Footer ── */
+.footer-illustration {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: var(--space-xl);
+  margin-bottom: -1px; /* overlap to prevent gap */
+  position: relative;
+  z-index: 2;
+}
+.footer-illustration img {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+}
+
 footer {
   background: var(--navy);
   color: rgba(255,255,255,0.6);
