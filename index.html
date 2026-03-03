@@ -106,11 +106,11 @@
   <div class="page-wash" aria-hidden="true"></div>
 
   <!-- SVG Filters for watercolor effects -->
-  <svg class="sr-only" aria-hidden="true">
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <defs>
-      <filter id="wc-edge">
-        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" seed="2" result="noise"/>
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+      <filter id="wc-edge" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="4" seed="2" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
       </filter>
     </defs>
   </svg>
@@ -177,9 +177,8 @@
       <div class="origin-timeline" aria-hidden="true"></div>
 
       <div class="container origin-block origin-block--intro">
-        <div class="origin-collage reveal-scale">
+        <div class="origin-visual reveal-scale">
           <img src="photos/A7307910.jpg" alt="Inside Part and Parcel restaurant — the team at work behind the bar" class="origin-photo" loading="lazy">
-          <img src="tasteful-decor-interior-victoria-bc.jpg" alt="Dried flowers on a wooden table at Part and Parcel" class="origin-accent" loading="lazy">
         </div>
         <div class="origin-copy">
           <span class="section-label reveal">Since 2013</span>
@@ -199,7 +198,7 @@
           <p class="reveal">We believe in letting ingredients speak for themselves. Our menu changes with the seasons, highlighting the best produce Vancouver Island has to offer. From our house-made pastas to our creative vegetable-forward plates, every dish tells a story of local abundance.</p>
           <a href="about.html" class="btn btn-outline reveal" style="margin-top: 1.5rem;">Read our full story</a>
         </div>
-        <div class="origin-collage origin-collage--flip reveal-scale">
+        <div class="origin-visual origin-visual--flip reveal-scale">
           <img src="part-and-parcel-interior-dining-illustrated.png" alt="Watercolor illustration of the Part and Parcel dining room with wooden tables, fresh flowers, and warm lighting" class="origin-illustration" loading="lazy">
         </div>
       </div>
@@ -274,6 +273,7 @@
         </div>
         <div class="testimonials-grid">
           <div class="testimonial-card wc-card reveal">
+            <span class="testimonial-quote" aria-hidden="true">&ldquo;</span>
             <blockquote>The food is always inventive and delicious, the atmosphere is chill and comfy and the service is professional and knowledgeable.</blockquote>
             <hr class="testimonial-divider">
             <div class="testimonial-attribution">
@@ -282,6 +282,7 @@
             </div>
           </div>
           <div class="testimonial-card wc-card reveal">
+            <span class="testimonial-quote" aria-hidden="true">&ldquo;</span>
             <blockquote>Best chicken sandwich in town and the charred broccoli sandwich is unique and superb.</blockquote>
             <hr class="testimonial-divider">
             <div class="testimonial-attribution">
@@ -290,6 +291,7 @@
             </div>
           </div>
           <div class="testimonial-card wc-card reveal">
+            <span class="testimonial-quote" aria-hidden="true">&ldquo;</span>
             <blockquote>Fantastic dining experience — food was exceptional and inventive. Refreshing discovery. We will return.</blockquote>
             <hr class="testimonial-divider">
             <div class="testimonial-attribution">
@@ -502,22 +504,12 @@
         yPercent: -6,
         ease: 'none',
         scrollTrigger: {
-          trigger: img.closest('.origin-collage'),
+          trigger: img.closest('.origin-visual'),
           start: 'top bottom',
           end: 'bottom top',
           scrub: true
         }
       });
-    });
-
-    /* Origin accent photo float-in */
-    gsap.utils.toArray('.origin-accent').forEach(img => {
-      gsap.fromTo(img,
-        { opacity: 0, y: 30, rotate: 8 },
-        { opacity: 1, y: 0, rotate: 3, duration: 1.2, ease: 'power2.out',
-          scrollTrigger: { trigger: img.closest('.origin-collage'), start: 'top 75%' }
-        }
-      );
     });
 
     /* Origin pull-quote */
