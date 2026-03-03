@@ -83,16 +83,15 @@
   </nav>
 
   <!-- Hero -->
-  <header class="hero-with-image">
-    <div class="hero-content">
-      <div class="hero-interior" style="padding:0; text-align:left;">
-        <span class="handwritten hero-anim">What we're cooking</span>
-        <h1 class="hero-anim">The Menu</h1>
-        <p class="hero-anim">Seasonal, local, and meant to be shared. We recommend 3–4 plates per person.</p>
-      </div>
+  <header class="hero-immersive">
+    <div class="hero-bg">
+      <img src="photos/best-dinner-quadra-village-victoria-bc.jpg" alt="Dinner spread at Part and Parcel" loading="eager" class="hero-anim-img">
     </div>
-    <div class="hero-image-container hero-anim-img">
-      <img src="photos/best-dinner-quadra-village-victoria-bc.jpg" alt="Dinner spread at Part and Parcel" loading="eager">
+    <div class="hero-overlay"></div>
+    <div class="hero-interior">
+      <span class="handwritten hero-anim">What we're cooking</span>
+      <h1 class="hero-anim">The Menu</h1>
+      <p class="hero-anim">Seasonal, local, and meant to be shared. We recommend 3–4 plates per person.</p>
     </div>
   </header>
 
@@ -399,7 +398,7 @@
     gsap.fromTo('.hero-interior .handwritten', { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, delay: 0.2 });
     gsap.fromTo('.hero-interior h1', { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, delay: 0.35 });
     gsap.fromTo('.hero-interior p', { y: 15, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, delay: 0.5 });
-    gsap.fromTo('.hero-anim-img', { x: 30, opacity: 0, scale: 0.95 }, { x: 0, opacity: 1, scale: 1, duration: 1, delay: 0.4, ease: 'power2.out' });
+    gsap.fromTo('.hero-anim-img', { scale: 1.1, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.5, ease: 'power2.out' });
 
     ScrollTrigger.batch('.reveal', {
       onEnter: b => gsap.to(b, { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: 'power2.out' }),
