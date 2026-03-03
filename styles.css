@@ -217,10 +217,10 @@ nav.scrolled .nav-logo img { height: 36px; }
 .nav-links { display: flex; gap: 2.2rem; align-items: center; }
 .nav-links a {
   position: relative;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   color: var(--text-light);
   transition: color 0.3s;
 }
@@ -245,10 +245,11 @@ nav.scrolled .nav-logo img { height: 36px; }
 .nav-cta {
   background: var(--terracotta) !important;
   color: #fff !important;
-  font-family: var(--font-serif) !important;
-  font-size: 0.95rem !important;
-  letter-spacing: 0.02em !important;
-  padding: 0.5rem 1.4rem;
+  font-family: var(--font-sans) !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+  padding: 0.55rem 1.4rem;
   border-radius: 3px;
   transition: background 0.3s, transform 0.2s !important;
 }
