@@ -450,20 +450,17 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
   border: none;
   border-radius: 4px;
   transition: transform 0.3s ease, background 0.3s ease;
-  overflow: visible;
 }
 .wc-card::before {
   content: '';
   position: absolute;
   inset: 0;
+  border: 2px solid var(--gold);
   border-radius: 4px;
+  opacity: 0.28;
   pointer-events: none;
-  box-shadow:
-    inset 0 0 0 1.5px rgba(212,167,106,0.30),
-    inset 2px 1px 0 0 rgba(212,167,106,0.10),
-    inset -1px 2px 0 0 rgba(212,167,106,0.08),
-    inset 0 -1px 0 1px rgba(212,167,106,0.06);
-  transition: box-shadow 0.4s ease;
+  filter: url(#wc-edge);
+  transition: opacity 0.4s ease, border-color 0.4s ease;
 }
 .wc-card::after {
   content: '';
@@ -473,27 +470,21 @@ section { padding: var(--space-xl) 0; position: relative; z-index: 1; }
   pointer-events: none;
   background:
     radial-gradient(ellipse at 5% 5%, rgba(212,167,106,0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 95% 95%, rgba(196,101,60,0.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 0%, rgba(212,167,106,0.04) 0%, transparent 30%);
-  opacity: 1;
-  transition: opacity 0.4s ease;
+    radial-gradient(ellipse at 95% 95%, rgba(196,101,60,0.05) 0%, transparent 50%);
+  transition: background 0.4s ease;
 }
 .wc-card:hover {
   transform: translateY(-3px);
   background: rgba(255,255,255,0.85);
 }
 .wc-card:hover::before {
-  box-shadow:
-    inset 0 0 0 1.5px rgba(196,101,60,0.35),
-    inset 2px 1px 0 0 rgba(196,101,60,0.12),
-    inset -1px 2px 0 0 rgba(196,101,60,0.10),
-    inset 0 -1px 0 1px rgba(196,101,60,0.08);
+  opacity: 0.45;
+  border-color: var(--terracotta);
 }
 .wc-card:hover::after {
   background:
     radial-gradient(ellipse at 5% 5%, rgba(212,167,106,0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 95% 95%, rgba(196,101,60,0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 0%, rgba(212,167,106,0.06) 0%, transparent 30%);
+    radial-gradient(ellipse at 95% 95%, rgba(196,101,60,0.08) 0%, transparent 50%);
 }
 
 /* ── Experience Cards (Home) ── */
