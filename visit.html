@@ -256,7 +256,28 @@
       onEnter: b => gsap.to(b, { opacity: 1, x: 0, duration: 0.9, ease: 'power2.out' }),
       start: 'top 85%'
     });
+    /* Floating Book Now */
+    const bookNowFloat = document.querySelector('.book-now-float');
+    if (bookNowFloat) {
+      let showThreshold = 200;
+      const heroCtas = document.querySelector('.hero-ctas');
+      if (heroCtas) {
+        showThreshold = heroCtas.getBoundingClientRect().bottom + window.scrollY + 60;
+      }
+      const updateFloat = () => {
+        bookNowFloat.classList.toggle('visible',
+          !mobileMenu.classList.contains('open') && window.scrollY > showThreshold);
+      };
+      window.addEventListener('scroll', updateFloat, { passive: true });
+      hamburger.addEventListener('click', updateFloat);
+      updateFloat();
+    }
   });
   </script>
+  <a href="https://www.opentable.ca/r/part-and-parcel-victoria#reserve"
+     class="book-now-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Book a table at Part &amp; Parcel">Book Now</a>
 </body>
 </html>
