@@ -98,13 +98,17 @@
   <main id="main">
     <!-- Menu Tabs -->
     <section aria-label="Menus">
-      <div class="container">
-        <div class="menu-tabs" role="tablist" aria-label="Menu sections">
-          <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="dinner" id="tab-dinner" data-tab="dinner" tabindex="0">Dinner</button>
-          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="lunch" id="tab-lunch" data-tab="lunch" tabindex="-1">Lunch</button>
-          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="happyhour" id="tab-happyhour" data-tab="happyhour" tabindex="-1">Happy Hour</button>
-          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="drinks" id="tab-drinks" data-tab="drinks" tabindex="-1">Drinks</button>
+      <div class="menu-tabs-bar">
+        <div class="container">
+          <div class="menu-tabs" role="tablist" aria-label="Menu sections">
+            <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="dinner" id="tab-dinner" data-tab="dinner" tabindex="0">Dinner</button>
+            <button class="menu-tab" role="tab" aria-selected="false" aria-controls="lunch" id="tab-lunch" data-tab="lunch" tabindex="-1">Lunch</button>
+            <button class="menu-tab" role="tab" aria-selected="false" aria-controls="happyhour" id="tab-happyhour" data-tab="happyhour" tabindex="-1">Happy Hour</button>
+            <button class="menu-tab" role="tab" aria-selected="false" aria-controls="drinks" id="tab-drinks" data-tab="drinks" tabindex="-1">Drinks</button>
+          </div>
         </div>
+      </div>
+      <div class="container menu-panels">
 
         <!-- Dinner -->
         <div class="menu-panel active" id="dinner" role="tabpanel" aria-labelledby="tab-dinner">
@@ -396,6 +400,15 @@
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50), { passive: true });
     nav.classList.toggle('scrolled', window.scrollY > 50);
+
+    /* Sticky tab bar shadow */
+    const tabsBar = document.querySelector('.menu-tabs-bar');
+    if (tabsBar) {
+      const navH = () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 72;
+      const updateTabsBar = () => tabsBar.classList.toggle('is-stuck', tabsBar.getBoundingClientRect().top <= navH() + 1);
+      window.addEventListener('scroll', updateTabsBar, { passive: true });
+      updateTabsBar();
+    }
 
     /* Menu tabs */
     const tabs = document.querySelectorAll('.menu-tab');
