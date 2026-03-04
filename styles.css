@@ -1108,9 +1108,9 @@ footer h4 { color: #fff; font-family: var(--font-serif); font-size: 1rem; margin
 }
 .testimonial-card blockquote {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--navy);
   margin-bottom: 1.5rem;
   padding-left: 0.5rem;
@@ -1309,7 +1309,7 @@ a { -webkit-tap-highlight-color: transparent; }
   .footer-links a { font-size: 0.95rem; }
   footer h4 { font-size: 0.95rem; }
   .origin-pullquote blockquote { font-size: 1.6rem; }
-  .testimonial-card blockquote { font-size: 1rem; }
+  .testimonial-card blockquote { font-size: 1.1rem; }
   .experience-card h3 { font-size: 1.3rem; }
   .experience-card .card-hours { font-size: 1.15rem; }
   .experience-card p { font-size: 0.95rem; }
