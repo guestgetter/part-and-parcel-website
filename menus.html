@@ -421,7 +421,18 @@
       tab.setAttribute('tabindex', '0');
       document.getElementById(tab.dataset.tab).classList.add('active');
     }
-    tabs.forEach(tab => tab.addEventListener('click', () => activateTab(tab)));
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      activateTab(tab);
+      const tabsBar    = document.querySelector('.menu-tabs-bar');
+      const panelsWrap = document.querySelector('.menu-panels');
+      if (tabsBar && panelsWrap) {
+        const scrollTarget = tabsBar.getBoundingClientRect().bottom + window.scrollY - 8;
+        const panelDocTop  = panelsWrap.getBoundingClientRect().top  + window.scrollY;
+        if (window.scrollY > panelDocTop) {
+          window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+        }
+      }
+    }));
 
     const tabList = document.querySelector('[role="tablist"]');
     tabList.addEventListener('keydown', (e) => {
