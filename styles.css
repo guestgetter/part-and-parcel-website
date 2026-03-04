@@ -70,7 +70,7 @@ html {
   scroll-padding-top: calc(var(--nav-height) + 1rem);
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -78,7 +78,7 @@ body {
   font-size: clamp(16px, 1.4vw + 8px, 23px);
   color: var(--text);
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
     radial-gradient(ellipse at 20% 0%, rgba(232,200,144,0.12) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 100%, rgba(196,101,60,0.06) 0%, transparent 40%),
